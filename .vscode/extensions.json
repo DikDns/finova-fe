@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "ritwickdey.LiveServer",
+    "formulahendry.auto-close-tag",
+    "formulahendry.auto-rename-tag",
+    "dbaeumer.vscode-eslint",
+    "ecmel.vscode-html-css",
+    "xabikos.JavaScriptSnippets",
+    "christian-kohler.path-intellisense"
+  ]
+}
