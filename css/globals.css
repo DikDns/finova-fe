@@ -1,0 +1,121 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+/* VARS */
+:root {
+  --PRIMARY: hsl(205, 42%, 27%);
+  --SECONDARY: hsl(185, 31%, 34%);
+  --TEXT: hsl(0, 0%, 21%);
+  --BACKGROUND: hsl(0, 0%, 98%);
+  --ACCENT: hsl(0, 0%, 85%);
+  --PRIMARY_50: hsl(197, 100%, 94%);
+  --PRIMARY_100: hsl(209, 81%, 88%);
+  --PRIMARY_200: hsl(208, 50%, 79%);
+  --PRIMARY_300: hsl(208, 37%, 70%);
+  --PRIMARY_400: hsl(208, 30%, 62%);
+  --PRIMARY_500: hsl(207, 25%, 53%);
+  --PRIMARY_600: hsl(208, 25%, 45%);
+  --PRIMARY_700: hsl(207, 29%, 37%);
+  --PRIMARY_800: hsl(207, 34%, 30%);
+  --PRIMARY_900: hsl(205, 40%, 22%);
+  --SECONDARY_50: hsl(184, 95%, 92%);
+  --SECONDARY_100: hsl(185, 49%, 82%);
+  --SECONDARY_200: hsl(185, 35%, 73%);
+  --SECONDARY_300: hsl(185, 28%, 64%);
+  --SECONDARY_400: hsl(185, 22%, 55%);
+  --SECONDARY_500: hsl(185, 22%, 47%);
+  --SECONDARY_600: hsl(185, 26%, 39%);
+  --SECONDARY_700: hsl(185, 30%, 32%);
+  --SECONDARY_800: hsl(184, 37%, 24%);
+  --SECONDARY_900: hsl(184, 47%, 18%);
+  --NEUTRAL_50: hsl(0, 0%, 95%);
+  --NEUTRAL_100: hsl(0, 0%, 92%);
+  --NEUTRAL_200: hsl(0, 0%, 78%);
+  --NEUTRAL_300: hsl(0, 0%, 69%);
+  --NEUTRAL_400: hsl(0, 0%, 61%);
+  --NEUTRAL_500: hsl(0, 0%, 53%);
+  --NEUTRAL_600: hsl(0, 0%, 45%);
+  --NEUTRAL_700: hsl(0, 0%, 37%);
+  --NEUTRAL_800: hsl(0, 0%, 29%);
+  --NEUTRAL_900: hsl(0, 0%, 22%);
+  --DANGER_950: hsl(359, 79%, 15%);
+  --DANGER_900: hsl(359, 69%, 30%);
+  --DANGER_800: hsl(356, 92%, 33%);
+  --DANGER_700: hsl(358, 100%, 38%);
+  --DANGER_600: hsl(357, 100%, 45%);
+  --DANGER_500: hsl(357, 96%, 58%);
+  --DANGER_400: hsl(359, 100%, 70%);
+  --DANGER_300: hsl(0, 100%, 82%);
+  --DANGER_200: hsl(0, 100%, 89%);
+  --DANGER_100: hsl(0, 100%, 94%);
+  --DANGER_50: hsl(0, 86%, 97%);
+  --SUCCESS_950: hsl(145, 88%, 10%);
+  --SUCCESS_900: hsl(145, 73%, 19%);
+  --SUCCESS_800: hsl(148, 98%, 20%);
+  --SUCCESS_700: hsl(145, 100%, 25%);
+  --SUCCESS_600: hsl(142, 100%, 33%);
+  --SUCCESS_500: hsl(144, 100%, 39%);
+  --SUCCESS_400: hsl(150, 96%, 45%);
+  --SUCCESS_300: hsl(143, 81%, 71%);
+  --SUCCESS_200: hsl(141, 82%, 85%);
+  --SUCCESS_100: hsl(141, 84%, 93%);
+  --SUCCESS_50: hsl(138, 76%, 97%);
+  --AI_BRAND_VIVID_SKY_BLUE: hsl(194, 85%, 62%);
+  --AI_BRAND_NEON_BLUE: hsl(229, 83%, 60%);
+  --AI_BRAND_ZAFFRE: hsl(258, 86%, 34%);
+  --AI_BRAND_GRAPE: hsl(276, 91%, 38%);
+  --AI_BRAND_ROSE: hsl(333, 93%, 56%);
+}
+
+html {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  color: var(--TEXT);
+  background-color: var(--BACKGROUND);
+}
+
+h1 {
+  font-family: "Domine", serif;
+  font-size: 5.61rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: "Domine", serif;
+  font-size: 4.209rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-family: "Domine", serif;
+  font-size: 3.157rem;
+  font-weight: 700;
+}
+
+h4 {
+  font-family: "Domine", serif;
+  font-size: 2.369rem;
+  font-weight: 700;
+}
+
+h5 {
+  font-family: "Domine", serif;
+  font-size: 1.777rem;
+  font-weight: 700;
+}
+
+h6 {
+  font-family: "Domine", serif;
+  font-size: 1.333rem;
+  font-weight: 700;
+}
+
+p {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.small {
+  font-size: 0.75rem;
+}
