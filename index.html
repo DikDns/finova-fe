@@ -1,53 +1,197 @@
 <!DOCTYPE html>
-<html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-
-    <!-- Responsive -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <!-- SEO -->
-    <meta name="description" content="Finova" />
-    <meta name="keywords" content="Finova" />
+    <meta name="description" content="Finova - Finansial dalam Genggaman">
+    <meta name="keywords" content="Finova, financial management, budgeting, expense tracking">
+    
+    <title>Finova - Finansial dalam Genggaman</title>
 
-    <title>Finova</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
 
-    <!-- FAVICON -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/assets/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/assets/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/assets/favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+    <!-- Google Fonts - Domine -->
+    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="assets/css/reset.css" rel="stylesheet">
+    <link href="assets/css/globals.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/finova-logo.svg" alt="Finova Logo">
+            </a>
+    
+            <!-- Tombol hamburger hanya di mobile -->
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Menu Navbar -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link me-3" href="features/index.html">Features</a></li>
+                    <li class="nav-item"><a class="nav-link me-3" href="pricing/index.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link me-3" href="sign-in/index.html">Login</a></li>
+                    <li class="nav-item"><a class="btn btn-custom" href="#">Begin Planning</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="./assets/css/reset.css" />
-    <link rel="stylesheet" href="./assets/css/globals.css" />
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2 class="mb-3">Finansial dalam <span class="highlight">Genggaman</span></h2>
+                    <p class="mb-4">Kelola keuangan dengan Finova</p>
+                    <a href="#" class="btn btn-custom">Begin Planning</a>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="hero-bell">
+                        <img src="assets/img/peeps.png" alt="peeps" class="img-fluid">
+                    </div>
+                </div>
+            </div><br><br>
 
-    <!-- Fontawesome -->
-    <script
-      src="https://kit.fontawesome.com/89851fc4a2.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <h1>Homepage</h1>
+            <div class="quote text-center mt-5">
+                <p class="fst-italic">"Finova bukan sekadar aplikasi, tapi kunci keuangan yang lebih teratur dan tenang."</p>
+                <p class="quote-author"><b>Rafi Zamzami</b>, Media Social Student Associate</p>
+            </div>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,</p>
+            <!-- Partner Logos -->
+            <div class="partner-logos mt-5 d-flex justify-content-center align-items-center">
+                <img src="assets/img/ascendia.jpg" alt="Ascendia" class="mx-3" height="40">
+                <img src="assets/img/himarpl.jpg" alt="Himappl" class="mx-3" height="40">
+                <img src="assets/img/manifest.jpg" alt="Manifest" class="mx-3" height="40">
+                <img src="assets/img/explora.jpg" alt="Explora" class="mx-3" height="40">
+            </div>
+        </div>
+    </section>
 
-    <h2>Hahaha Gabisa langsung push</h2>
+    <!-- Notification Section -->
+    <section class="notification-feature py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="notification-bell">
+                        <img src="assets/img/bell.png" alt="Notification Bell" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="mb-3">Pengingat Batas Pengeluaran</h2>
+                    <p class="mb-4">Fitur ini membantu mu mengelola keuangan dengan memberikan pengingat saat pengeluaran mencapai batas yang ditetapkan.</p>
+                    <a href="#" class="btn btn-custom">To Feature: Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Features Section -->
+    <div class="quote text-center mt-5">
+        <h2 class="mb-3">What you can do with finova?</h2>
+        <p class="quote-author">I need to..</p>
+    </div>
+    
+    <section class="features py-5">
+        <div class="container">
+            <div class="features-slider-container">
+                <div class="features-slide">
+                    <div class="features-inner-container">
+                        <div class="card mb-4">
+                            <div class="card-body text-center">
+                                <i class="fas fa-dollar-sign fa-3x mb-3"></i>
+                                <h5>Atur Keuangan</h5>
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-body text-center">
+                                <i class="fas fa-bell fa-3x mb-3"></i>
+                                <h5>Pengingat Pengeluaran</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="features-slide">
+                    <div class="features-inner-container">
+                        <div class="card mb-4">
+                            <div class="card-body text-center">
+                                <i class="fas fa-table fa-3x mb-3"></i>
+                                <h5>Kelola Tabungan</h5>
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-body text-center">
+                                <i class="fas fa-chart-line fa-3x mb-3"></i>
+                                <h5>Laporan Pengeluaran</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="features-slide">
+                    <div class="features-inner-container">
+                        <div class="card mb-4">
+                            <div class="card-body text-center">
+                                <i class="fas fa-chart-pie fa-3x mb-3"></i>
+                                <h5>Laporan Pemasukan</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="features-slide active">
+                <div class="pagination-dot active" data-slide="0"></div>
+                <div class="pagination-dot" data-slide="1"></div>
+                <div class="pagination-dot" data-slide="2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Control Section -->
+    <section class="financial-control py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2>Uangmu Kendalimu</h2>
+                    <p>Kontrol penuh atas keuangan pribadi Anda dengan fitur yang komprehensif</p><br>
+                    <a href="#" class="btn btn-custom me-2">Begin Planing</a>
+                    <a href="#" class="btn btn-outline">See Features</a>
+                </div>
+                <div class="col-md-6 text-end">
+                    <img src="assets/img/handMoney.png" alt="Money" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-4 text-center">
+        <div class="container">
+            <p class="text-muted">&copy; 2025 Finova. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    
+    <!-- Custom JavaScript -->
     <script src="./assets/js/main.js"></script>
-  </body>
+</body>
 </html>

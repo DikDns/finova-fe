@@ -1,0 +1,188 @@
+/* Menggunakan variabel dari global.css */
+.navbar-brand img {
+    max-width: 75px;
+    height: auto;
+  }  
+
+.btn-custom {
+    background-color: var(--PRIMARY_700);
+    border-color: var(--PRIMARY_700);
+    color: #ffffff;
+    border-radius: 128px;
+    padding: 10px 20px;
+    font-weight: 600;
+}
+
+.btn-custom:hover {
+    background-color: #DFF6FF; 
+    color: hsl(205, 42%, 27%);
+  }
+
+.btn-outline {
+    background-color: var(--PRIMARY_50);
+    border-color: var(--PRIMARY_50);
+    color: var(--PRIMARY_700);
+    border-radius: 128px;
+    padding: 10px 20px;
+    font-weight: 600;
+}
+
+.btn-outline:hover {
+    background-color: hsl(205, 42%, 27%); 
+    color: hsl(197, 100%, 94%);
+}
+
+.highlight {
+    color: hsl(205, 42%, 27%);;
+    font-weight: bold; 
+  }
+  
+.partner-logos img {
+    max-height: 50px; 
+    width: auto;
+  }  
+
+/* Features Slider Styles */
+.features-slider-container {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    display: flex;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.features-slider-container::-webkit-scrollbar {
+    display: none;
+}
+
+.features-slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.features-inner-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.features .card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    min-width: 250px;
+    background-color: var(--BACKGROUND);
+}
+
+.features .card:hover {
+    transform: translateY(-10px);
+}
+
+.features .card-body i {
+    color: var(--PRIMARY_700);
+    margin-bottom: 15px;
+}
+
+.features-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination-dot {
+    width: 10px;
+    height: 10px;
+    background-color: var(--ACCENT);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pagination-dot.active {
+    background-color: var(--PRIMARY_700);
+}
+
+
+h1, h2, h3, .btn {
+    font-family: "Domine", serif;
+    font-weight: 700;
+}
+
+
+body {
+    font-family: "Nunito Sans", sans-serif;
+    color: var(--TEXT);
+    background-color: var(--BACKGROUND);
+}
+
+
+
+/* Mobile Styles (≤ 768px) */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .navbar-brand img {
+        max-width: 60px; 
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-custom,
+    .btn-outline {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Hero Section */
+    .hero {
+        text-align: center;
+    }
+
+    .hero .col-md-6 {
+        width: 100%;
+    }
+
+    .hero img {
+        max-width: 80%;
+    }
+
+    /* Features Section */
+    .features-inner-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .features .card {
+        width: 90%; 
+    }
+
+    /* Partner Logos */
+    .partner-logos {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .partner-logos img {
+        max-height: 30px;
+    }
+
+    /* Pagination */
+    .features-pagination {
+        margin-top: 10px;
+    }
+}
