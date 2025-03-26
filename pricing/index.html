@@ -30,20 +30,139 @@
       href="../assets/favicon/favicon-16x16.png"
     />
     <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+    
+    <!-- Google fonts - Domine -->
+    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <!-- CSS -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="../assets/css/reset.css" />
     <link rel="stylesheet" href="../assets/css/globals.css" />
+    <link rel="stylesheet" href="../assets/css/styles.css">
 
     <!-- Fontawesome -->
     <script
       src="https://kit.fontawesome.com/89851fc4a2.js"
       crossorigin="anonymous"
     ></script>
-  </head>
-  <body>
-    <h1>Pricing</h1>
 
+  </head>
+  <body class="bg-white" style="min-height: 100vh;">
+    <!-- nav start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+      <div class="container">
+          <a class="navbar-brand" href="#">
+              <img src="../assets/img/finova-logo.svg" alt="Finova Logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="navbar-nav ms-3 me-auto gap-2">
+                <a class="nav-link me-3 fs-6" href="../features/index.html">Features</a>
+                <a class="nav-link me-3 fs-6 fw-bold" href="../pricing/index.html">Pricing</a>
+              </div>
+              <div class="navbar-nav d-flex justify-content-center align-items-center gap-2">
+                <a class="nav-link me-3 fs-6" href="../sign-in/index.html">Login</a>
+                <!-- <a class="btn text-white rounded-pill px-3" style="background-color: var(--PRIMARY);" href="#">Begin Planing</a> -->
+                <a class="btn btn-custom" href="#">Begin Planing</a>
+              </div>
+          </div>
+      </div>
+    </nav>
+    <!-- nav end -->
+
+    <!-- content start -->
+    <hr style="background-color: #d9d9d9; height: 10px; border: 0;">
+    <div class="container py-5">
+
+      <!-- CTA start -->
+      <div class="d-flex flex-column justify-content-center align-items-center mt-5">
+        <h3 class="text-black">Upgrade Finansialmu,</h3>
+        <h3 class="highlight">Gak Pakai Ribet!</h3>
+      </div>
+      <!-- CTA end -->
+
+      <!-- 3 icon start -->
+      <div class="d-flex mt-5">
+        <div class="col-4 d-flex flex-column justify-content-center align-items-center">
+          <img src="../assets/img/money_1.png" style="width: 100px;" class="img-fluid" alt="Money">
+          <h6 class="fw-semibold text-center mt-3 text-black">Langganan Perhari, Hidup Jadi Simple!</h6>
+        </div>
+        <div class="col-4 d-flex flex-column justify-content-center align-items-center">
+          <img src="../assets/img/money_2.png" style="width: 100px;" class="img-fluid" alt="Money">
+          <h6 class="fw-semibold text-center mt-3 text-black">Gak Perlu Ribet Ngatur Keuangan Lagi!</h6>
+        </div>
+        <div class="col-4 d-flex flex-column justify-content-center align-items-center">
+          <img src="../assets/img/money_3.png" style="width: 100px;" class="img-fluid" alt="Money">
+          <h6 class="fw-semibold text-center mt-3 text-black">Stop Tebak-Tebak Pengeluaran Bulanan!</h6>
+        </div>
+      </div>
+      <!-- 3 icon end -->
+
+      <!-- paket card start -->
+      <div class="d-flex justify-content-center">
+         <div class="pricing-container mt-5">
+           <h4 class="mb-4 text-black">Pilih Paket Sesuai Kebutuhan!</h4>
+           <p class="text-muted mb-4">Coba demo secara gratis. Suka? Mulai dari Rp2.500/hari untuk akses fitur mantap lainnya!</p>
+           
+           <form>
+               <div class="pricing-option selected" onclick="selectPlan(this)">
+                   <div class="d-flex align-items-center">
+                       <input type="radio" name="plan" id="bulanan" checked>
+                       <label for="bulanan">Bulanan</label>
+                       <span class="badge bg-success ms-2">Hemat 17%</span>
+                   </div>
+                   <div>Rp2.500/hari</div>
+               </div>
+               
+               <div class="pricing-option" onclick="selectPlan(this)">
+                   <div class="d-flex align-items-center">
+                       <input type="radio" name="plan" id="harian">
+                       <label for="harian">Harian</label>
+                   </div>
+                   <div>Rp3.000/hari</div>
+               </div>
+               
+               <button class="btn w-100 mt-3 text-white" style="background-color: var(--PRIMARY);">Coba Sekarang!</button>
+           </form>
+         </div>
+      </div>
+      <!-- paket card end -->
+
+      <!-- upgrade feature start -->
+      <div class="container mt-5 mb-3">
+          <div class="row align-items-center">
+              <div class="col-md-6">
+                  <h2 class="text-black">Upgrade & Nikmati Fitur Lengkap!</h2>
+                  <p class="mt-4">Cuan lancar, finansial stabil <br> Upgrade sekarang biar duit tetap aman dan terkontrol! </p>
+                  <a href="#" class="btn btn-custom me-2 mt-4">Mulai Atur Keuanganmu</a>
+                  <a href="#" class="btn btn-outline mt-4">Eksplor Fitur Sekarang</a>
+              </div>
+              <div class="col-md-6 text-end">
+                  <img src="../assets/img/handMoney.png" alt="Money" class="img-fluid">
+              </div>
+          </div>
+      </div>
+      <!-- upgrade feature end -->
+
+    </div>
+    <hr style="background-color: #d9d9d9; height: 10px; border: 0;">
+    <!-- content end -->
+
+    <!-- footer start -->
+    <footer class="bg-white py-4 text-center">
+      <div class="container">
+        <p class="text-muted">Copyright &copy; 2025, Finova. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <!-- footer end -->
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Custom JS -->
     <script src="../assets/js/main.js"></script>
   </body>
 </html>
