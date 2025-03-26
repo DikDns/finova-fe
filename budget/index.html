@@ -35,18 +35,34 @@
   <body>
     <div class="budget-container">
       <div class="sidebar">
-        <div class="nav-items">
-          <div class="nav-item active">
-            <i class="fas fa-wallet"></i>
-            <span>Keuangan</span>
+        <div>
+          <div class="account-info">
+            <img
+              src="../assets/img/finova-logo.svg"
+              alt="Finova Logo"
+              class="logo"
+            />
+            <button class="heading-button">
+              <div>
+                <span class="name">Andika Eka Kurnia</span>
+                <span class="email">andika.eka.kurnia@upi.edu</span>
+              </div>
+              <i class="fa-solid fa-caret-down"></i>
+            </button>
           </div>
-          <div class="nav-item">
-            <i class="fas fa-chart-line"></i>
-            <span>Analisa</span>
-          </div>
-          <div class="nav-item">
-            <i class="fas fa-receipt"></i>
-            <span>Rekening</span>
+          <div class="nav-items">
+            <div class="nav-item active">
+              <i class="fas fa-wallet"></i>
+              <span>Keuangan</span>
+            </div>
+            <div class="nav-item">
+              <i class="fas fa-chart-line"></i>
+              <span>Analisa</span>
+            </div>
+            <div class="nav-item">
+              <i class="fas fa-receipt"></i>
+              <span>Rekening</span>
+            </div>
           </div>
         </div>
         <div class="mobile-header">
@@ -82,10 +98,7 @@
             <span id="currentMonth">Mar 2025</span>
             <button id="nextMonth"><i class="fas fa-chevron-right"></i></button>
           </div>
-          <button class="ai-assistant-btn">
-            <i class="fas fa-robot"></i>
-            <span>AI Assistant</span>
-          </button>
+          <button class="ai-assistant-btn">AI Assistant</button>
         </div>
 
         <div class="tabs">
@@ -112,7 +125,11 @@
             <tbody id="budgetTableBody">
               <!-- Tagihan Category -->
               <tr class="group-row" id="group-trigger">
-                <td>
+                <td class="desktop" colspan="4">
+                  <i class="fas fa-minus"></i>
+                  Tagihan
+                </td>
+                <td class="mobile">
                   <i class="fas fa-minus"></i>
                   Tagihan
                 </td>

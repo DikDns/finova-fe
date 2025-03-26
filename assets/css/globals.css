@@ -65,6 +65,14 @@
   --AI_BRAND_ZAFFRE: hsl(258, 86%, 34%);
   --AI_BRAND_GRAPE: hsl(276, 91%, 38%);
   --AI_BRAND_ROSE: hsl(333, 93%, 56%);
+  --AI_BRAND_GRADIENT: linear-gradient(
+    264deg,
+    #f72585 0.35%,
+    #7209b7 25.17%,
+    #3a0ca3 50%,
+    #4361ee 75.14%,
+    #4cc9f0 99.65%
+  );
 }
 
 :root {
