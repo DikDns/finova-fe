@@ -120,3 +120,69 @@ body {
     color: var(--TEXT);
     background-color: var(--BACKGROUND);
 }
+
+
+
+/* Mobile Styles (≤ 768px) */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .navbar-brand img {
+        max-width: 60px; 
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-custom,
+    .btn-outline {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Hero Section */
+    .hero {
+        text-align: center;
+    }
+
+    .hero .col-md-6 {
+        width: 100%;
+    }
+
+    .hero img {
+        max-width: 80%;
+    }
+
+    /* Features Section */
+    .features-inner-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .features .card {
+        width: 90%; 
+    }
+
+    /* Partner Logos */
+    .partner-logos {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .partner-logos img {
+        max-height: 30px;
+    }
+
+    /* Pagination */
+    .features-pagination {
+        margin-top: 10px;
+    }
+}
