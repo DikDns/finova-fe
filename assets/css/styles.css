@@ -186,35 +186,3 @@ body {
         margin-top: 10px;
     }
 }
-
-/* Pricing Page CSS start */
-
-.pricing-container {
-    background-color: #efeff0;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    padding: 30px;
-    width: 500px;
-    text-align: center;
-}
-
-.pricing-option {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    border: 1px solid #e0e0e0;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-
-.pricing-option.selected {
-    border-color: #007bff;
-    background-color: #f0f8ff;
-}
-
-.pricing-option input[type="radio"] {
-    margin-right: 10px;
-}
-
-/* Pricing Page CSS end */
