@@ -67,92 +67,232 @@
   --AI_BRAND_ROSE: hsl(333, 93%, 56%);
 }
 
+:root {
+  /* Font Sizes */
+  --FONT_SIZE_4XL: 5.61rem;
+  --FONT_SIZE_3XL: 4.209rem;
+  --FONT_SIZE_2XL: 3.157rem;
+  --FONT_SIZE_XL: 2.369rem;
+  --FONT_SIZE_L: 1.777rem;
+  --FONT_SIZE_MD: 1.333rem;
+  --FONT_SIZE_BASE: 1rem;
+  --FONT_SIZE_SM: 0.75rem;
+
+  /* Spacing System */
+  --SPACE-0: 0;
+  --SPACE-1: 0.25rem;
+  --SPACE-2: 0.5rem;
+  --SPACE-3: 0.75rem;
+  --SPACE-4: 1rem;
+  --SPACE-5: 1.25rem;
+  --SPACE-6: 1.5rem;
+  --SPACE-8: 2rem;
+  --SPACE-10: 2.5rem;
+  --SPACE-12: 3rem;
+  --SPACE-16: 4rem;
+  --SPACE-20: 5rem;
+  --SPACE-24: 6rem;
+  --SPACE-32: 8rem;
+  --SPACE-40: 10rem;
+  --SPACE-48: 12rem;
+  --SPACE-56: 14rem;
+  --SPACE-64: 16rem;
+  --SPACE-80: 20rem;
+  --SPACE-96: 24rem;
+}
+
 html {
   font-family: "Nunito Sans", sans-serif;
-  font-size: 16px;
+  font-size: var(--FONT_SIZE_BASE);
   color: var(--TEXT);
   background-color: var(--BACKGROUND);
 }
 
-h1 {
+h1,
+.h1 {
   font-family: "Domine", serif;
-  font-size: 5.61rem;
+  font-size: var(--FONT_SIZE_4XL);
   font-weight: 700;
 }
 
-h2 {
+h2,
+.h2 {
   font-family: "Domine", serif;
-  font-size: 4.209rem;
+  font-size: var(--FONT_SIZE_3XL);
   font-weight: 700;
 }
 
-h3 {
+h3,
+.h3 {
   font-family: "Domine", serif;
-  font-size: 3.157rem;
+  font-size: var(--FONT_SIZE_2XL);
   font-weight: 700;
 }
 
-h4 {
+h4,
+.h4 {
   font-family: "Domine", serif;
-  font-size: 2.369rem;
+  font-size: var(--FONT_SIZE_XL);
   font-weight: 700;
 }
 
-h5 {
+h5,
+.h5 {
   font-family: "Domine", serif;
-  font-size: 1.777rem;
+  font-size: var(--FONT_SIZE_L);
   font-weight: 700;
 }
 
-h6 {
+h6,
+.h6 {
   font-family: "Domine", serif;
-  font-size: 1.333rem;
+  font-size: var(--FONT_SIZE_MD);
   font-weight: 700;
 }
 
 p {
   font-family: "Nunito Sans", sans-serif;
-  font-size: 1rem;
+  font-size: var(--FONT_SIZE_BASE);
   font-weight: 400;
 }
 
 .small {
-  font-size: 0.75rem;
+  font-size: var(--FONT_SIZE_SM);
 }
 
-@media screen and (max-width: 768px) {
-  html {
-    font-size: 14px;
-  }
+/* Margin Utilities */
+.m-0 {
+  margin: var(--SPACE-0);
+}
+.m-1 {
+  margin: var(--SPACE-1);
+}
+.m-2 {
+  margin: var(--SPACE-2);
+}
+.m-3 {
+  margin: var(--SPACE-3);
+}
+.m-4 {
+  margin: var(--SPACE-4);
+}
+.m-5 {
+  margin: var(--SPACE-5);
+}
+.m-6 {
+  margin: var(--SPACE-6);
+}
+.m-8 {
+  margin: var(--SPACE-8);
+}
+.m-10 {
+  margin: var(--SPACE-10);
+}
+.m-12 {
+  margin: var(--SPACE-12);
+}
+.m-16 {
+  margin: var(--SPACE-16);
+}
+.m-20 {
+  margin: var(--SPACE-20);
+}
+.m-24 {
+  margin: var(--SPACE-24);
+}
+.m-32 {
+  margin: var(--SPACE-32);
+}
+.m-40 {
+  margin: var(--SPACE-40);
+}
+.m-48 {
+  margin: var(--SPACE-48);
+}
+.m-56 {
+  margin: var(--SPACE-56);
+}
+.m-64 {
+  margin: var(--SPACE-64);
+}
+.m-80 {
+  margin: var(--SPACE-80);
+}
+.m-96 {
+  margin: var(--SPACE-96);
+}
 
-  h1 {
-    font-size: 3.157rem;
-  }
+/* Padding Utilities */
+.p-0 {
+  padding: var(--SPACE-0);
+}
+.p-1 {
+  padding: var(--SPACE-1);
+}
+.p-2 {
+  padding: var(--SPACE-2);
+}
+.p-3 {
+  padding: var(--SPACE-3);
+}
+.p-4 {
+  padding: var(--SPACE-4);
+}
+.p-5 {
+  padding: var(--SPACE-5);
+}
+.p-6 {
+  padding: var(--SPACE-6);
+}
+.p-8 {
+  padding: var(--SPACE-8);
+}
+.p-10 {
+  padding: var(--SPACE-10);
+}
+.p-12 {
+  padding: var(--SPACE-12);
+}
+.p-16 {
+  padding: var(--SPACE-16);
+}
+.p-20 {
+  padding: var(--SPACE-20);
+}
+.p-24 {
+  padding: var(--SPACE-24);
+}
+.p-32 {
+  padding: var(--SPACE-32);
+}
+.p-40 {
+  padding: var(--SPACE-40);
+}
+.p-48 {
+  padding: var(--SPACE-48);
+}
+.p-56 {
+  padding: var(--SPACE-56);
+}
+.p-64 {
+  padding: var(--SPACE-64);
+}
+.p-80 {
+  padding: var(--SPACE-80);
+}
+.p-96 {
+  padding: var(--SPACE-96);
+}
 
-  h2 {
-    font-size: 2.369rem;
-  }
-  h3 {
-    font-size: 1.777rem;
-  }
-
-  h4 {
-    font-size: 1.333rem;
-  }
-
-  h5 {
-    font-size: 1rem;
-  }
-
-  h6 {
-    font-size: 0.75rem;
-  }
-
-  p {
-    font-size: 0.75rem;
-  }
-
-  .small {
-    font-size: 0.75rem;
+@media screen and (min-width: 768px) {
+  :root {
+    --FONT_SIZE_4XL: 5.61rem;
+    --FONT_SIZE_3XL: 4.209rem;
+    --FONT_SIZE_2XL: 3.157rem;
+    --FONT_SIZE_XL: 2.369rem;
+    --FONT_SIZE_L: 1.777rem;
+    --FONT_SIZE_MD: 1.333rem;
+    --FONT_SIZE_BASE: 1rem;
+    --FONT_SIZE_SM: 0.75rem;
   }
 }

@@ -2,16 +2,10 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-
-    <!-- Responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- SEO -->
-    <meta name="description" content="Finova" />
-    <meta name="keywords" content="Finova" />
-
+    <meta name="description" content="Finova - Manajemen Keuangan" />
+    <meta name="keywords" content="Finova, Keuangan, Budget, Anggaran" />
     <title>Finova | Keuangan</title>
-
-    <!-- FAVICON -->
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -30,20 +24,149 @@
       href="../assets/favicon/favicon-16x16.png"
     />
     <link rel="manifest" href="../assets/favicon/site.webmanifest" />
-
-    <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/reset.css" />
     <link rel="stylesheet" href="../assets/css/globals.css" />
-
-    <!-- Fontawesome -->
+    <link rel="stylesheet" href="./assets/budget.css" />
     <script
       src="https://kit.fontawesome.com/89851fc4a2.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
-    <h1>Keuangan</h1>
+    <div class="budget-container">
+      <div class="sidebar">
+        <div class="nav-items">
+          <div class="nav-item active">
+            <i class="fas fa-wallet"></i>
+            <span>Keuangan</span>
+          </div>
+          <div class="nav-item">
+            <i class="fas fa-chart-line"></i>
+            <span>Analisa</span>
+          </div>
+          <div class="nav-item">
+            <i class="fas fa-receipt"></i>
+            <span>Rekening</span>
+          </div>
+        </div>
+        <div class="mobile-header">
+          <button class="month-selector">
+            <span id="currentMonth">Mar 2025</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+        </div>
+        <div class="balance-card">
+          <div class="balance-wrapper">
+            <div class="balance-indicator"></div>
+            <div class="balance-container">
+              <span class="balance-amount" id="balanceAmount">Rp2.000.000</span>
+              <span class="balance-label">Siap dialokasikan</span>
+            </div>
+          </div>
+          <button class="allocate-btn" id="allocateBtn">Alokasikan</button>
+        </div>
+      </div>
 
-    <script src="../assets/js/main.js"></script>
+      <div class="main-content">
+        <div class="header">
+          <div class="month-selector">
+            <button id="prevMonth"><i class="fas fa-chevron-left"></i></button>
+            <span id="currentMonth">Mar 2025</span>
+            <button id="nextMonth"><i class="fas fa-chevron-right"></i></button>
+          </div>
+          <button class="ai-assistant-btn">
+            <i class="fas fa-robot"></i>
+            <span>AI Assistant</span>
+          </button>
+        </div>
+
+        <div class="tabs">
+          <div class="tab active" data-tab="semua">Semua</div>
+          <div class="tab" data-tab="kekurangan">Kekurangan Dana</div>
+          <div class="tab" data-tab="kelebihan">Kelebihan Dana</div>
+          <div class="tab" data-tab="dinonaktifkan">Dinonaktifkan</div>
+        </div>
+
+        <div class="budget-table-container">
+          <button class="add-category-btn" id="addCategoryBtn">
+            <i class="fas fa-plus-circle"></i>
+            <span>Tambah Kategori</span>
+          </button>
+          <table class="budget-table">
+            <thead>
+              <tr>
+                <th>Kategori</th>
+                <th>Dialokasikan</th>
+                <th>Transaksi</th>
+                <th>Target</th>
+              </tr>
+            </thead>
+            <tbody id="budgetTableBody">
+              <!-- Tagihan Category -->
+              <tr class="group-row" id="group-trigger">
+                <td>
+                  <i class="fas fa-minus"></i>
+                  Tagihan
+                </td>
+                <td class="total-amount-allocated">
+                  <span>Dialokasikan</span>
+                  <span>Rp450.000</span>
+                </td>
+                <td class="total-amount-spent">-Rp350.000</td>
+                <td class="total-amount-target">
+                  <span>Target</span>
+                  <span>Rp100.000</span>
+                </td>
+              </tr>
+              <tr class="category-row" data-group="Tagihan">
+                <td>
+                  <span class="category-icon">🏠</span>
+                  KPR
+                </td>
+                <td class="amount-allocated">Rp450.000</td>
+                <td class="amount-spent">-Rp350.000</td>
+                <td class="amount-target">Rp100.000</td>
+              </tr>
+              <tr class="category-row" data-group="Tagihan">
+                <td>
+                  <span class="category-icon">⚡</span>
+                  Listrik
+                </td>
+                <td class="amount-allocated">Rp450.000</td>
+                <td class="amount-spent">-Rp350.000</td>
+                <td class="amount-target">Rp100.000</td>
+              </tr>
+              <tr class="category-row" data-group="Tagihan">
+                <td>
+                  <span class="category-icon">🗑️</span>
+                  Sampah
+                </td>
+                <td class="amount-allocated">Rp450.000</td>
+                <td class="amount-spent">-Rp350.000</td>
+                <td class="amount-target">Rp100.000</td>
+              </tr>
+              <tr class="category-row" data-group="Tagihan">
+                <td>
+                  <span class="category-icon">💧</span>
+                  Air
+                </td>
+                <td class="amount-allocated">Rp450.000</td>
+                <td class="amount-spent">-Rp350.000</td>
+                <td class="amount-target">Rp100.000</td>
+              </tr>
+              <tr class="category-row" data-group="Tagihan">
+                <td>
+                  <span class="category-icon">📶</span>
+                  Internet
+                </td>
+                <td class="amount-allocated">Rp450.000</td>
+                <td class="amount-spent">-Rp350.000</td>
+                <td class="amount-target">Rp100.000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

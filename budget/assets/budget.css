@@ -1,0 +1,309 @@
+/* Budget Page Styles */
+.main-content {
+  padding-bottom: var(--SPACE-56);
+}
+/* Sidebar */
+
+.ai-assistant-btn span {
+  display: none;
+}
+
+.mobile-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: var(--PRIMARY);
+}
+
+.nav-items {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--BACKGROUND);
+  justify-content: space-between;
+  padding: var(--SPACE-2) var(--SPACE-4);
+}
+
+.nav-item {
+  display: flex;
+  z-index: 100;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: var(--NEUTRAL_700);
+  font-size: 0.875rem;
+}
+
+.nav-item:hover {
+  background-color: var(--NEUTRAL_100);
+}
+
+.nav-item.active,
+.nav-item.active:hover {
+  color: var(--PRIMARY_800);
+  background-color: var(--BACKGROUND);
+  font-weight: 600;
+  cursor: default;
+  border-bottom: 4px solid var(--PRIMARY_500);
+}
+
+/* Header */
+.header {
+  display: none;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: var(--BACKGROUND);
+  border-bottom: 1px solid var(--NEUTRAL_200);
+}
+
+.mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: var(--BACKGROUND);
+  padding: var(--SPACE-2) var(--SPACE-4);
+  border-bottom: 1px solid var(--NEUTRAL_200);
+}
+
+.sidebar {
+  padding: 0 var(--SPACE-4);
+  padding-top: var(--SPACE-20);
+}
+
+.month-selector {
+  display: flex;
+  align-items: center;
+  padding: var(--SPACE-2) var(--SPACE-4);
+  cursor: pointer;
+  gap: var(--SPACE-2);
+  align-items: center;
+  justify-content: center;
+  font-size: var(--FONT_SIZE_MD);
+}
+
+.month-selector span {
+  font-weight: 600;
+}
+
+.ai-assistant-btn {
+  display: flex;
+  background-color: var(--AI_BRAND_NEON_BLUE);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Tabs */
+.tabs {
+  display: none;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  overflow-x: auto;
+  padding: 0.5rem;
+  background-color: var(--BACKGROUND);
+  border-radius: 8px;
+}
+
+.tab {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  background-color: var(--NEUTRAL_50);
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+
+.tab.active {
+  background-color: var(--PRIMARY_100);
+  color: var(--PRIMARY_800);
+}
+
+/* Balance Card */
+.balance-card {
+  background-color: var(--SUCCESS_100);
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.balance-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--SPACE-4);
+}
+.balance-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.balance-indicator {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--SUCCESS_500);
+}
+
+.balance-amount {
+  font-size: var(--FONT_SIZE_MD);
+  font-weight: 600;
+  font-family: "Domine", serif;
+  color: var(--SUCCESS_950);
+}
+
+.balance-label {
+  color: var(--SUCCESS_700);
+  font-size: var(--FONT_SIZE_SM);
+  font-weight: 500;
+}
+
+.allocate-btn {
+  background-color: var(--SUCCESS_600);
+  color: white;
+  border: none;
+  font-size: var(--FONT_SIZE_SM);
+  border-radius: 32px;
+  padding: var(--SPACE-2);
+  cursor: pointer;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.allocate-btn:hover {
+  background-color: var(--SUCCESS_700);
+}
+
+/* Budget Table */
+.budget-table-container {
+  background-color: white;
+  border-radius: 0px;
+  margin-top: var(--SPACE-4);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.add-category-btn {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--PRIMARY_600);
+  background: none;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  width: 100%;
+  justify-content: center;
+  border-bottom: 1px solid var(--NEUTRAL_100);
+}
+
+.budget-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.budget-table thead {
+  display: none;
+}
+
+.budget-table th {
+  text-align: left;
+  padding: 1rem;
+  border-bottom: 1px solid var(--NEUTRAL_200);
+  font-weight: 600;
+  color: var(--NEUTRAL_700);
+  white-space: nowrap;
+}
+
+.budget-table td {
+  border-bottom: 1px solid var(--NEUTRAL_100);
+  min-width: 120px;
+}
+
+.budget-table th,
+.budget-table td {
+  padding: var(--SPACE-2) var(--SPACE-4);
+  font-size: var(--FONT_SIZE_SM);
+}
+
+.budget-table-container {
+  overflow-x: auto;
+}
+
+.budget-table th:nth-child(3),
+.budget-table td:nth-child(3) {
+  display: none;
+}
+
+.total-amount-allocated span:nth-child(1),
+.total-amount-target span:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--FONT_SIZE_SM);
+}
+
+.total-amount-allocated span:nth-child(2),
+.total-amount-target span:nth-child(2) {
+  font-weight: 700;
+}
+.group-row {
+  background-color: var(--ACCENT);
+}
+
+.group-row td:nth-child(1) {
+  font-weight: 700;
+}
+
+/* Mobile Styles */
+@media screen and (min-width: 768px) {
+  .ai-assistant-btn {
+    display: flex;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+
+  .nav-items {
+    display: flex;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .budget-table th:nth-child(3),
+  .budget-table td:nth-child(3) {
+    display: block;
+  }
+}
