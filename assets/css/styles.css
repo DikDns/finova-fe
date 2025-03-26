@@ -1,36 +1,59 @@
-/* Import Domine font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&display=swap');
-
-body {
-    font-family: 'Domine', serif;
-}
+/* Menggunakan variabel dari global.css */
+.navbar-brand img {
+    max-width: 75px;
+    height: auto;
+  }  
 
 .btn-custom {
-    background-color: #284A63 ;
-    border-color: #284A63 ;
-    color: #ffffff ;
+    background-color: var(--PRIMARY_700);
+    border-color: var(--PRIMARY_700);
+    color: #ffffff;
     border-radius: 128px;
+    padding: 10px 20px;
+    font-weight: 600;
 }
 
-.btn-outline {
+.btn-custom:hover {
     background-color: #DFF6FF; 
-    border-color: #DFF6FF;
-    color: #284A63; /* Warna teks agar kontras */
+    color: hsl(205, 42%, 27%);
+  }
+
+.btn-outline {
+    background-color: var(--PRIMARY_50);
+    border-color: var(--PRIMARY_50);
+    color: var(--PRIMARY_700);
     border-radius: 128px;
+    padding: 10px 20px;
+    font-weight: 600;
 }
+
+.btn-outline:hover {
+    background-color: hsl(205, 42%, 27%); 
+    color: hsl(197, 100%, 94%);
+}
+
+.highlight {
+    color: hsl(205, 42%, 27%);;
+    font-weight: bold; 
+  }
+  
+.partner-logos img {
+    max-height: 50px; 
+    width: auto;
+  }  
 
 /* Features Slider Styles */
 .features-slider-container {
-    overflow-x: scroll;
+    overflow-x: auto;
     scroll-snap-type: x mandatory;
     display: flex;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .features-slider-container::-webkit-scrollbar {
-    display: none; /* WebKit */
+    display: none;
 }
 
 .features-slide {
@@ -53,6 +76,7 @@ body {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s;
     min-width: 250px;
+    background-color: var(--BACKGROUND);
 }
 
 .features .card:hover {
@@ -60,7 +84,7 @@ body {
 }
 
 .features .card-body i {
-    color: #284A63;
+    color: var(--PRIMARY_700);
     margin-bottom: 15px;
 }
 
@@ -73,7 +97,7 @@ body {
 .pagination-dot {
     width: 10px;
     height: 10px;
-    background-color: #ddd;
+    background-color: var(--ACCENT);
     border-radius: 50%;
     margin: 0 5px;
     cursor: pointer;
@@ -81,10 +105,18 @@ body {
 }
 
 .pagination-dot.active {
-    background-color: #284A63;
+    background-color: var(--PRIMARY_700);
 }
 
-/* Ensure headings and buttons use Domine */
+
 h1, h2, h3, .btn {
-    font-family: 'Domine', serif;
+    font-family: "Domine", serif;
+    font-weight: 700;
+}
+
+
+body {
+    font-family: "Nunito Sans", sans-serif;
+    color: var(--TEXT);
+    background-color: var(--BACKGROUND);
 }
