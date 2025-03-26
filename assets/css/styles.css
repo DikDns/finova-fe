@@ -1,0 +1,90 @@
+/* Import Domine font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Domine', serif;
+}
+
+.btn-custom {
+    background-color: #284A63 ;
+    border-color: #284A63 ;
+    color: #ffffff ;
+    border-radius: 128px;
+}
+
+.btn-outline {
+    background-color: #DFF6FF; 
+    border-color: #DFF6FF;
+    color: #284A63; /* Warna teks agar kontras */
+    border-radius: 128px;
+}
+
+/* Features Slider Styles */
+.features-slider-container {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    display: flex;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+.features-slider-container::-webkit-scrollbar {
+    display: none; /* WebKit */
+}
+
+.features-slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.features-inner-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.features .card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    min-width: 250px;
+}
+
+.features .card:hover {
+    transform: translateY(-10px);
+}
+
+.features .card-body i {
+    color: #284A63;
+    margin-bottom: 15px;
+}
+
+.features-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pagination-dot.active {
+    background-color: #284A63;
+}
+
+/* Ensure headings and buttons use Domine */
+h1, h2, h3, .btn {
+    font-family: 'Domine', serif;
+}
