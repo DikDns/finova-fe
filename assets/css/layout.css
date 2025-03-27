@@ -30,8 +30,9 @@
   display: block;
   border: none;
   background: transparent;
-  padding: var(--SPACE-2);
+  padding: var(--SPACE-4);
   cursor: pointer;
+  z-index: 1001;
 }
 
 .navbar-toggler-icon {
@@ -63,24 +64,31 @@
 
 /* Mobile menu */
 .navbar-collapse {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
+  display: block;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
   background: var(--BACKGROUND);
-  padding: var(--SPACE-4);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding-top: calc(var(--SPACE-8) + var(--SPACE-4));
+  transition: right 0.3s ease;
+  z-index: 999;
+  overflow-y: auto;
 }
 
 .navbar-collapse.show {
-  display: block;
+  right: 0;
 }
 
 .navbar-nav {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--SPACE-4);
 }
 
 .nav-item {
@@ -99,7 +107,7 @@
   color: var(--PRIMARY_700);
 }
 
-.btn-custom {
+.btn-primary {
   display: inline-block;
   padding: var(--SPACE-2) var(--SPACE-6);
   background: var(--PRIMARY_700);
@@ -112,12 +120,31 @@
   transition: background-color 0.3s ease;
 }
 
-.btn-custom:hover {
+.btn-primary:hover {
   background: var(--PRIMARY_800);
 }
 
+.btn-secondary {
+  display: inline-block;
+  padding: var(--SPACE-2) var(--SPACE-6);
+  background: var(--PRIMARY_50);
+  color: var(--PRIMARY);
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 32px;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--PRIMARY_100);
+  color: var(--PRIMARY);
+}
+
 @media (min-width: 576px) {
-  .btn-custom {
+  .btn-primary,
+  .btn-secondary {
     width: fit-content;
     max-width: unset;
   }
@@ -148,4 +175,37 @@
   .nav-link {
     padding: var(--SPACE-2);
   }
+}
+
+.navbar {
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler {
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon {
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler.active .navbar-toggler-icon {
+  background: transparent;
+}
+
+.navbar-toggler.active .navbar-toggler-icon::before {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+
+.navbar-toggler.active .navbar-toggler-icon::after {
+  transform: rotate(-45deg) translate(4px, -4px);
+}
+
+.navbar-close {
+  right: var(--SPACE-4);
+  transition: color 0.3s ease;
+}
+
+.navbar-close:hover {
+  color: var(--PRIMARY_700);
 }
