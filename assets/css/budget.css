@@ -373,6 +373,12 @@
     display: table-header-group;
   }
 
+  .budget-table th,
+  .budget-table td {
+    padding: var(--SPACE-4) var(--SPACE-6);
+    font-size: var(--FONT_SIZE_BASE);
+  }
+
   .category-row td:nth-child(3) {
     display: block;
   }
