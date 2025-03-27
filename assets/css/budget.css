@@ -74,7 +74,6 @@
   margin-bottom: 1rem;
   flex-direction: row;
   align-items: center;
-  padding: 0.5rem 1rem;
   background-color: var(--BACKGROUND);
   border-bottom: 1px solid var(--NEUTRAL_200);
 }
@@ -223,7 +222,7 @@
 }
 
 .category-row td:nth-child(3),
-.group-row td:nth-child(3) {
+.group-row td:nth-child(4) {
   display: none;
 }
 
@@ -368,7 +367,6 @@
     cursor: pointer;
     font-weight: 500;
     justify-content: center;
-    border-bottom: 1px solid var(--NEUTRAL_100);
   }
 
   .budget-table thead {

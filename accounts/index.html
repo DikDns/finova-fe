@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="../assets/css/reset.css" />
     <link rel="stylesheet" href="../assets/css/globals.css" />
     <link rel="stylesheet" href="../assets/css/budget.css" />
+    <link rel="stylesheet" href="../assets/css/account.css" />
     <link rel="stylesheet" href="../assets/css/ai-sidebar.css" />
     <script
       src="https://kit.fontawesome.com/89851fc4a2.js"
@@ -68,130 +69,223 @@
           </div>
         </div>
         <div class="mobile-header">
-          <button class="month-selector">
-            <span id="currentMonth">Mar 2025</span>
-            <i class="fas fa-chevron-down"></i>
-          </button>
+          <div class="header-text-container">
+            <h6>Semua Transaksi</h6>
+          </div>
           <div class="mobile-button-more">
             <button class="mobile-button-icon">
-              <i class="fa-solid fa-pen-to-square"></i>
+              <i class="fa-solid fa-magnifying-glass"></i>
             </button>
             <button class="mobile-button-icon">
               <i class="fa-solid fa-ellipsis-vertical"></i>
             </button>
           </div>
         </div>
-        <div class="balance-card">
-          <div class="balance-wrapper">
-            <div class="balance-indicator"></div>
-            <div class="balance-container">
-              <span class="balance-amount" id="balanceAmount">Rp2.000.000</span>
-              <span class="balance-label">Siap dialokasikan</span>
-            </div>
-          </div>
-          <button class="allocate-btn" id="allocateBtn">Alokasikan</button>
-        </div>
       </div>
 
       <div class="main-content">
         <div class="header">
-          <div class="month-selector">
-            <button id="prevMonth"><i class="fas fa-chevron-left"></i></button>
-            <span id="currentMonth">Mar 2025</span>
-            <button id="nextMonth"><i class="fas fa-chevron-right"></i></button>
-          </div>
+          <button class="header-text-button">
+            <h5>Semua Rekening</h5>
+            <i class="fa-solid fa-caret-down"></i>
+          </button>
           <button class="ai-assistant-btn">AI Assistant</button>
         </div>
 
-        <div class="tabs">
-          <div class="tab active" data-tab="semua">Semua</div>
-          <div class="tab" data-tab="kekurangan">Kekurangan Dana</div>
-          <div class="tab" data-tab="kelebihan">Kelebihan Dana</div>
-          <div class="tab" data-tab="dinonaktifkan">Dinonaktifkan</div>
+        <div class="current-budget">
+          <h6 class="current-budget-text">Rp2.000.000</h6>
         </div>
 
-        <div class="budget-table-container">
-          <button class="add-category-btn" id="addCategoryBtn">
+        <div class="transaction-table-container">
+          <button class="add-transaction-btn" id="addTransactionBtn">
             <i class="fas fa-plus-circle"></i>
-            <span>Tambah Kategori</span>
+            <span>Tambah Transaksi</span>
           </button>
-          <table class="budget-table">
+          <table class="transaction-table">
             <thead>
               <tr>
-                <th>Kategori</th>
-                <th>Dialokasikan</th>
-                <th>Transaksi</th>
-                <th>Target</th>
+                <th>
+                  <input type="checkbox" class="select-all" />
+                </th>
+                <th>Rekening</th>
+                <th>Tanggal</th>
+                <th>Penerima</th>
+                <th>Pengeluaran</th>
+                <th>Pemasukan</th>
               </tr>
             </thead>
-            <tbody id="budgetTableBody">
-              <!-- Tagihan Category -->
-              <tr class="group-row" id="group-trigger">
-                <td class="desktop" colspan="4">
-                  <i class="fas fa-minus"></i>
-                  Tagihan
-                </td>
-                <td class="mobile">
-                  <i class="fas fa-minus"></i>
-                  Tagihan
-                </td>
-                <td class="total-amount-allocated">
-                  <span>Dialokasikan</span>
-                  <span>Rp450.000</span>
-                </td>
-                <td class="total-amount-spent">-Rp350.000</td>
-                <td class="total-amount-target">
-                  <span>Target</span>
-                  <span>Rp100.000</span>
-                </td>
-              </tr>
-              <tr class="category-row" data-group="Tagihan">
+            <tbody id="transactionTableBody">
+              <tr>
                 <td>
-                  <span class="category-icon">🏠</span>
-                  KPR
+                  <button class="flag-btn">
+                    <i class="fa-solid fa-flag"></i>
+                  </button>
                 </td>
-                <td class="amount-allocated">Rp450.000</td>
-                <td class="amount-spent">-Rp350.000</td>
-                <td class="amount-target">Rp100.000</td>
+                <td>Utama</td>
+                <td>03/23/2025</td>
+                <td></td>
+                <td></td>
+                <td>Rp50.000</td>
               </tr>
-              <tr class="category-row" data-group="Tagihan">
+              <tr>
                 <td>
-                  <span class="category-icon">⚡</span>
-                  Listrik
+                  <button class="flag-btn">
+                    <i class="fa-solid fa-flag"></i>
+                  </button>
                 </td>
-                <td class="amount-allocated">Rp450.000</td>
-                <td class="amount-spent">-Rp350.000</td>
-                <td class="amount-target">Rp100.000</td>
+                <td>Utama</td>
+                <td>03/23/2025</td>
+                <td></td>
+                <td></td>
+                <td>Rp200.000</td>
               </tr>
-              <tr class="category-row" data-group="Tagihan">
+              <tr>
                 <td>
-                  <span class="category-icon">🗑️</span>
-                  Sampah
+                  <button class="flag-btn">
+                    <i class="fa-solid fa-flag"></i>
+                  </button>
                 </td>
-                <td class="amount-allocated">Rp450.000</td>
-                <td class="amount-spent">-Rp350.000</td>
-                <td class="amount-target">Rp100.000</td>
+                <td>Utama</td>
+                <td>03/21/2025</td>
+                <td></td>
+                <td>-Rp5.000</td>
+                <td></td>
               </tr>
-              <tr class="category-row" data-group="Tagihan">
+              <tr>
                 <td>
-                  <span class="category-icon">💧</span>
-                  Air
+                  <button class="flag-btn">
+                    <i class="fa-solid fa-flag"></i>
+                  </button>
                 </td>
-                <td class="amount-allocated">Rp450.000</td>
-                <td class="amount-spent">-Rp350.000</td>
-                <td class="amount-target">Rp100.000</td>
+                <td>Utama</td>
+                <td>03/19/2025</td>
+                <td></td>
+                <td>-Rp100.000</td>
+                <td></td>
               </tr>
-              <tr class="category-row" data-group="Tagihan">
+              <tr>
                 <td>
-                  <span class="category-icon">📶</span>
-                  Internet
+                  <button class="flag-btn">
+                    <i class="fa-solid fa-flag"></i>
+                  </button>
                 </td>
-                <td class="amount-allocated">Rp450.000</td>
-                <td class="amount-spent">-Rp350.000</td>
-                <td class="amount-target">Rp100.000</td>
+                <td>Utama</td>
+                <td>03/19/2025</td>
+                <td></td>
+                <td></td>
+                <td>Rp500.000</td>
+              </tr>
+              <tr>
+                <td>
+                  <button class="flag-btn">
+                    <i class="fa-solid fa-flag"></i>
+                  </button>
+                </td>
+                <td>Utama</td>
+                <td>03/18/2025</td>
+                <td></td>
+                <td>-Rp50.000</td>
+                <td></td>
               </tr>
             </tbody>
           </table>
+
+          <ul class="transaction-list">
+            <li class="transaction-item">
+              <div class="transaction-date">03/23/2025</div>
+              <div class="transaction-group">
+                <div class="transaction-checkbox">
+                  <input type="checkbox" />
+                </div>
+                <div class="transaction-content">
+                  <div class="transaction-payee">Penerima Diperlukan</div>
+                  <div class="transaction-subtitle">Siap Dialokasikan</div>
+                </div>
+                <div class="transaction-amount-account">
+                  <div class="transaction-amount positive">Rp50.000</div>
+                  <div class="transaction-account">utama</div>
+                </div>
+              </div>
+            </li>
+            <li class="transaction-item">
+              <div class="transaction-group">
+                <div class="transaction-checkbox">
+                  <input type="checkbox" />
+                </div>
+                <div class="transaction-content">
+                  <div class="transaction-payee">Penerima Diperlukan</div>
+                  <div class="transaction-subtitle">Siap Dialokasikan</div>
+                </div>
+                <div class="transaction-amount-account">
+                  <div class="transaction-amount positive">Rp200.000</div>
+                  <div class="transaction-account">utama</div>
+                </div>
+              </div>
+            </li>
+            <li class="transaction-item">
+              <div class="transaction-date">03/21/2025</div>
+              <div class="transaction-group">
+                <div class="transaction-checkbox">
+                  <input type="checkbox" />
+                </div>
+                <div class="transaction-content">
+                  <div class="transaction-payee">Penerima Diperlukan</div>
+                  <div class="transaction-subtitle">🛒 Belanja</div>
+                </div>
+                <div class="transaction-amount-account">
+                  <div class="transaction-amount negative">-Rp5.000</div>
+                  <div class="transaction-account">utama</div>
+                </div>
+              </div>
+            </li>
+            <li class="transaction-item">
+              <div class="transaction-date">03/19/2025</div>
+              <div class="transaction-group">
+                <div class="transaction-checkbox">
+                  <input type="checkbox" />
+                </div>
+                <div class="transaction-content">
+                  <div class="transaction-payee">Penerima Diperlukan</div>
+                  <div class="transaction-subtitle">🏠 KPR</div>
+                </div>
+                <div class="transaction-amount-account">
+                  <div class="transaction-amount negative">-Rp100.000</div>
+                  <div class="transaction-account">utama</div>
+                </div>
+              </div>
+            </li>
+            <li class="transaction-item">
+              <div class="transaction-group">
+                <div class="transaction-checkbox">
+                  <input type="checkbox" />
+                </div>
+                <div class="transaction-content">
+                  <div class="transaction-payee">Penerima Diperlukan</div>
+                  <div class="transaction-subtitle">Siap Dialokasikan</div>
+                </div>
+                <div class="transaction-amount-account">
+                  <div class="transaction-amount positive">Rp500.000</div>
+                  <div class="transaction-account">utama</div>
+                </div>
+              </div>
+            </li>
+            <li class="transaction-item">
+              <div class="transaction-date">03/18/2025</div>
+              <div class="transaction-group">
+                <div class="transaction-checkbox">
+                  <input type="checkbox" />
+                </div>
+                <div class="transaction-content">
+                  <div class="transaction-payee">Penerima Diperlukan</div>
+                  <div class="transaction-subtitle">⛽ Bensin</div>
+                </div>
+                <div class="transaction-amount-account">
+                  <div class="transaction-amount negative">-Rp50.000</div>
+                  <div class="transaction-account">utama</div>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

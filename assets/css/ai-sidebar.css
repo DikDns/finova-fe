@@ -130,11 +130,10 @@
 .ai-assistant-suggestion-text {
   width: 283px;
   color: #5e5e5e;
-  font-size: 16px;
+  font-size: var(--FONT_SIZE_SM);
   font-family: "Nunito Sans", sans-serif;
   font-weight: 700;
-  line-height: 21.33px;
-  letter-spacing: 0.32px;
+  letter-spacing: 0.24px;
 }
 
 .ai-assistant-input {
