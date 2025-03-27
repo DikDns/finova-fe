@@ -77,12 +77,12 @@
 
 :root {
   /* Font Sizes */
-  --FONT_SIZE_4XL: 5.61rem;
-  --FONT_SIZE_3XL: 4.209rem;
-  --FONT_SIZE_2XL: 3.157rem;
-  --FONT_SIZE_XL: 2.369rem;
-  --FONT_SIZE_L: 1.777rem;
-  --FONT_SIZE_MD: 1.333rem;
+  --FONT_SIZE_4XL: 4.209rem;
+  --FONT_SIZE_3XL: 3.157rem;
+  --FONT_SIZE_2XL: 2.369rem;
+  --FONT_SIZE_XL: 1.777rem;
+  --FONT_SIZE_L: 1.333rem;
+  --FONT_SIZE_MD: 1rem;
   --FONT_SIZE_BASE: 1rem;
   --FONT_SIZE_SM: 0.75rem;
 
