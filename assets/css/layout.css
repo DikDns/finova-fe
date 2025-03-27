@@ -1,0 +1,151 @@
+/* Mobile-first layout styles */
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--BACKGROUND);
+  padding: var(--SPACE-4);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--SPACE-4);
+}
+
+.navbar-brand img {
+  height: var(--SPACE-8);
+}
+
+/* Mobile menu button */
+.navbar-toggler {
+  display: block;
+  border: none;
+  background: transparent;
+  padding: var(--SPACE-2);
+  cursor: pointer;
+}
+
+.navbar-toggler-icon {
+  display: block;
+  width: 1.5rem;
+  height: 2px;
+  background: var(--TEXT);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--TEXT);
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before {
+  top: -6px;
+}
+
+.navbar-toggler-icon::after {
+  bottom: -6px;
+}
+
+/* Mobile menu */
+.navbar-collapse {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--BACKGROUND);
+  padding: var(--SPACE-4);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-collapse.show {
+  display: block;
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  margin: var(--SPACE-2) 0;
+}
+
+.nav-link {
+  display: block;
+  padding: var(--SPACE-2) 0;
+  color: var(--TEXT);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--PRIMARY_700);
+}
+
+.btn-custom {
+  display: inline-block;
+  padding: var(--SPACE-2) var(--SPACE-6);
+  background: var(--PRIMARY_700);
+  color: var(--BACKGROUND);
+  border-radius: 32px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+  background: var(--PRIMARY_800);
+}
+
+@media (min-width: 576px) {
+  .btn-custom {
+    width: fit-content;
+    max-width: unset;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .navbar-toggler {
+    display: none;
+  }
+
+  .navbar-collapse {
+    display: block;
+    position: static;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-item {
+    margin: 0 var(--SPACE-2);
+  }
+
+  .nav-link {
+    padding: var(--SPACE-2);
+  }
+}
