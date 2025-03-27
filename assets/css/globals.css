@@ -121,6 +121,7 @@ h1,
   font-family: "Domine", serif;
   font-size: var(--FONT_SIZE_4XL);
   font-weight: 700;
+  line-height: 80px;
 }
 
 h2,
@@ -128,6 +129,7 @@ h2,
   font-family: "Domine", serif;
   font-size: var(--FONT_SIZE_3XL);
   font-weight: 700;
+  line-height: 64px;
 }
 
 h3,
@@ -135,6 +137,7 @@ h3,
   font-family: "Domine", serif;
   font-size: var(--FONT_SIZE_2XL);
   font-weight: 700;
+  line-height: 52px;
 }
 
 h4,
@@ -142,6 +145,7 @@ h4,
   font-family: "Domine", serif;
   font-size: var(--FONT_SIZE_XL);
   font-weight: 700;
+  line-height: 32px;
 }
 
 h5,
@@ -149,6 +153,7 @@ h5,
   font-family: "Domine", serif;
   font-size: var(--FONT_SIZE_L);
   font-weight: 700;
+  line-height: 28px;
 }
 
 h6,
@@ -156,6 +161,7 @@ h6,
   font-family: "Domine", serif;
   font-size: var(--FONT_SIZE_MD);
   font-weight: 700;
+  line-height: 24px;
 }
 
 p {
@@ -302,5 +308,35 @@ p {
     --FONT_SIZE_MD: 1.333rem;
     --FONT_SIZE_BASE: 1rem;
     --FONT_SIZE_SM: 0.75rem;
+  }
+
+  h1,
+  .h1 {
+    line-height: 98px;
+  }
+
+  h2,
+  .h2 {
+    line-height: 80px;
+  }
+
+  h3,
+  .h3 {
+    line-height: 64px;
+  }
+
+  h4,
+  .h4 {
+    line-height: 48px;
+  }
+
+  h5,
+  .h5 {
+    line-height: 32px;
+  }
+
+  h6,
+  .h6 {
+    line-height: 28px;
   }
 }

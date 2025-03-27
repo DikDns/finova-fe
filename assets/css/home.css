@@ -43,6 +43,7 @@
   color: var(--NEUTRAL_600);
   max-width: 600px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .quote-author {
@@ -52,14 +53,17 @@
 
 /* Partner Logos */
 .partner-logos {
+  display: flex;
   padding: var(--SPACE-8) 0;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   gap: var(--SPACE-4);
 }
 
 .partner-logos img {
-  max-width: 120px;
+  width: 150px;
   height: auto;
+  filter: grayscale(100%) brightness(0%) opacity(25%);
 }
 
 /* Notification Feature */
@@ -67,11 +71,16 @@
   background: var(--BACKGROUND);
   padding: var(--SPACE-12) 0;
 }
+.notification-text {
+  display: flex;
+  gap: var(--SPACE-4);
+  flex-direction: column;
+  align-items: center;
+}
 
 .notification-bell img {
   max-width: 100%;
   height: auto;
-  margin-bottom: var(--SPACE-8);
 }
 
 /* Features Section */
@@ -130,19 +139,15 @@
   background: var(--PRIMARY_700);
 }
 
+.financial-content {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
 /* Financial Control Section */
 .financial-control {
   padding: var(--SPACE-12) 0;
-}
-
-.financial-control h2 {
-  font-size: var(--FONT_SIZE_L);
-  margin-bottom: var(--SPACE-4);
-}
-
-.financial-control p {
-  color: var(--NEUTRAL_600);
-  margin-bottom: var(--SPACE-8);
 }
 
 .btn-outline {
