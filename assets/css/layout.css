@@ -142,6 +142,11 @@
   color: var(--PRIMARY);
 }
 
+.footer {
+  padding: var(--SPACE-12) 0;
+  text-align: center;
+}
+
 @media (min-width: 576px) {
   .btn-primary,
   .btn-secondary {

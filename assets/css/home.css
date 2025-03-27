@@ -154,11 +154,6 @@
   gap: var(--SPACE-4);
 }
 
-.footer {
-  padding: var(--SPACE-12) 0;
-  text-align: center;
-}
-
 /* Desktop Styles */
 @media (min-width: 768px) {
   .hero {

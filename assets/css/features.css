@@ -1,195 +1,218 @@
-/* Mobile-first home page styles */
+body {
+  padding: 0 var(--SPACE-8);
+}
 
-/* Common styles */
-.container {
-  padding: 0 var(--SPACE-4);
-  max-width: 1200px;
-  margin: 0 auto;
+/* Features Page Mobile Styles */
+.hero {
+  padding: var(--SPACE-20) 0 var(--SPACE-12);
 }
 
 .hero-content {
+  gap: var(--SPACE-12);
   display: flex;
   flex-direction: column-reverse;
-}
-
-/* Hero Section */
-.hero {
-  padding: var(--SPACE-20) 0 var(--SPACE-8);
-  background: var(--NEUTRAL_50);
-}
-
-.hero .highlight {
-  color: var(--PRIMARY_700);
-}
-
-.hero p {
-  font-size: var(--FONT_SIZE_MD);
-  color: var(--NEUTRAL_600);
-  margin-bottom: var(--SPACE-8);
-}
-
-.hero-bell img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Quote Section */
-.quote {
-  padding: var(--SPACE-8) 0;
-}
-
-.quote p {
-  font-size: var(--FONT_SIZE_MD);
-  color: var(--NEUTRAL_600);
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.quote-author {
-  margin-top: var(--SPACE-4);
-  color: var(--NEUTRAL_900);
-}
-
-/* Partner Logos */
-.partner-logos {
-  display: flex;
-  padding: var(--SPACE-8) 0;
-  flex-direction: column;
   align-items: center;
-  gap: var(--SPACE-4);
+  justify-content: center;
 }
 
-.partner-logos img {
-  width: 150px;
-  height: auto;
-  filter: grayscale(100%) brightness(0%) opacity(25%);
-}
-
-/* Notification Feature */
-.notification-feature {
-  background: var(--BACKGROUND);
-  padding: var(--SPACE-12) 0;
-}
-.notification-text {
-  display: flex;
-  gap: var(--SPACE-4);
-  flex-direction: column;
-  align-items: center;
-}
-
-.notification-bell img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Features Section */
-.features {
-  padding: var(--SPACE-12) 0;
-  background: var(--NEUTRAL_50);
-}
-
-.features-slider-container {
-  position: relative;
-  overflow: hidden;
-}
-
-.features-slide {
-  display: none;
-}
-
-.features-slide.active {
-  display: block;
-}
-
-.features-inner-container {
-  padding: var(--SPACE-4);
-}
-
-.card {
-  background: var(--BACKGROUND);
-  border-radius: 8px;
-  padding: var(--SPACE-6);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.hero-text h2 {
   margin-bottom: var(--SPACE-4);
 }
 
-.card i {
-  color: var(--PRIMARY_700);
+.hero-text p {
+  margin-bottom: var(--SPACE-8);
 }
 
-.card h5 {
-  margin-top: var(--SPACE-4);
-  font-size: var(--FONT_SIZE_MD);
-  color: var(--NEUTRAL_900);
+.features {
+  padding: var(--SPACE-16) 0;
 }
 
-/* Pagination dots */
-.pagination-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--NEUTRAL_300);
-  display: inline-block;
-  margin: 0 var(--SPACE-1);
-  cursor: pointer;
+.section-heading {
+  margin-bottom: var(--SPACE-12);
 }
 
-.pagination-dot.active {
-  background: var(--PRIMARY_700);
+.section-heading h2 {
+  margin-bottom: var(--SPACE-2);
+}
+
+.features-grid {
+  gap: var(--SPACE-8);
+}
+
+.feature-card {
+  padding: var(--SPACE-8);
+  margin-bottom: var(--SPACE-4);
+}
+
+.feature-card img {
+  width: 128px;
+  height: 128px;
+  margin-bottom: var(--SPACE-4);
+}
+
+.feature-card h3 {
+  margin-bottom: var(--SPACE-2);
+}
+
+.notification-feature {
+  padding: var(--SPACE-16) 0;
+}
+
+.financial-control {
+  padding: var(--SPACE-16) 0;
 }
 
 .financial-content {
+  gap: var(--SPACE-8);
   display: flex;
   flex-direction: column-reverse;
+}
+
+.financial-text h2 {
+  margin-bottom: var(--SPACE-4);
+}
+
+.financial-text p {
+  margin-bottom: var(--SPACE-8);
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: var(--SPACE-4);
 }
 
-/* Financial Control Section */
-.financial-control {
-  padding: var(--SPACE-12) 0;
-}
-
-.btn-outline {
-  display: inline-block;
-  padding: var(--SPACE-2) var(--SPACE-4);
-  border: 2px solid var(--PRIMARY_700);
-  color: var(--PRIMARY_700);
-  text-decoration: none;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-}
-
-.btn-outline:hover {
-  background: var(--PRIMARY_700);
-  color: var(--BACKGROUND);
-}
-
-/* Desktop Styles */
+/* Desktop Adjustments */
 @media (min-width: 768px) {
+  body {
+    padding: 0 var(--SPACE-16);
+  }
+
   .hero {
-    padding: var(--SPACE-28) 0 var(--SPACE-16);
+    padding: var(--SPACE-32) 0 var(--SPACE-24);
   }
 
-  .hero h2 {
-    font-size: var(--FONT_SIZE_2XL);
+  .hero-content {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--SPACE-16);
   }
 
-  .hero-bell img {
-    margin-top: 0;
+  .hero-text {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
   }
 
-  .notification-bell img {
-    margin-bottom: 0;
+  .hero-image {
+    flex: 1;
   }
 
-  .features-inner-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--SPACE-8);
+  }
+
+  .feature-card {
+    transition: transform 0.3s ease;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .notification-content {
+    display: flex;
+    align-items: center;
+    gap: var(--SPACE-16);
+  }
+
+  .notification-text {
+    display: flex;
     gap: var(--SPACE-4);
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
   }
 
-  .card {
-    margin-bottom: 0;
+  .notification-image {
+    flex: 1;
   }
+
+  .financial-content {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--SPACE-16);
+  }
+
+  .financial-text {
+    flex: 1;
+    max-width: 50%;
+  }
+
+  .financial-image {
+    flex: 1;
+  }
+
+  .button-group {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .features {
+    padding: var(--SPACE-20) 0;
+  }
+
+  .section-heading {
+    margin-bottom: var(--SPACE-16);
+    text-align: center;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--SPACE-12);
+    align-items: start;
+  }
+
+  .feature-card {
+    padding: var(--SPACE-10);
+    margin-bottom: 0;
+    height: 100%;
+  }
+
+  /* Notification Section */
+  .notification-content {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--SPACE-16);
+  }
+
+  .notification-image {
+    flex: 1;
+    max-width: 55%;
+  }
+
+  .notification-text {
+    flex: 1;
+    padding: var(--SPACE-8);
+  }
+
+  /* CTA Section */
+  .financial-content {
+    gap: var(--SPACE-24);
+  }
+}
+
+.notification-feature {
+  padding: var(--SPACE-24) 0;
+}
+
+.financial-control {
+  padding: var(--SPACE-24) 0;
+}
+
+.button-group {
+  gap: var(--SPACE-6);
 }
