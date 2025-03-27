@@ -157,15 +157,19 @@
   }
 
   .navbar-collapse {
-    display: block;
+    display: flex !important;
     position: static;
+    width: auto;
+    height: auto;
     padding: 0;
-    box-shadow: none;
+    background: transparent;
+    transform: none;
+    overflow: visible;
   }
 
   .navbar-nav {
-    display: flex;
-    align-items: center;
+    flex-direction: row;
+    margin-left: auto;
   }
 
   .nav-item {
@@ -173,7 +177,16 @@
   }
 
   .nav-link {
-    padding: var(--SPACE-2);
+    padding: var(--SPACE-2) var(--SPACE-3);
+  }
+
+  .navbar-close {
+    display: none;
+  }
+
+  .btn-primary {
+    width: auto;
+    padding: var(--SPACE-2) var(--SPACE-6);
   }
 }
 

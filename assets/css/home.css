@@ -97,6 +97,7 @@
   background: var(--BACKGROUND);
   border-radius: 8px;
   padding: var(--SPACE-6);
+  height: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -161,11 +162,96 @@
 /* Desktop Styles */
 @media (min-width: 768px) {
   .hero {
-    padding: var(--SPACE-28) 0 var(--SPACE-16);
+    padding: var(--SPACE-32) 0 var(--SPACE-20);
+  }
+
+  .hero-content {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--SPACE-16);
+  }
+
+  .hero-text {
+    flex: 1;
+    max-width: 50%;
+  }
+
+  .hero-image {
+    flex: 1;
   }
 
   .hero h2 {
-    font-size: var(--FONT_SIZE_2XL);
+    font-size: var(--FONT_SIZE_3XL);
+    margin-bottom: var(--SPACE-6);
+  }
+
+  .hero p {
+    font-size: var(--FONT_SIZE_LG);
+    margin-bottom: var(--SPACE-12);
+  }
+
+  .partner-logos {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--SPACE-16);
+  }
+
+  .partner-logos img {
+    width: 180px;
+    transition: filter 0.3s ease;
+  }
+
+  .partner-logos img:hover {
+    filter: none;
+  }
+
+  .notification-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--SPACE-16);
+  }
+
+  .notification-image {
+    flex: 1;
+  }
+
+  .notification-text {
+    flex: 1;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .features-slider-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--SPACE-6);
+    margin-top: var(--SPACE-8);
+  }
+
+  .card {
+    padding: var(--SPACE-8);
+    transition: transform 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+  }
+
+  .quote p {
+    font-size: var(--FONT_SIZE_MD);
+    line-height: 1.6;
+  }
+
+  .features h2 {
+    text-align: center;
+  }
+
+  .quote-author {
+    font-size: var(--FONT_SIZE_BASE);
+    margin-top: var(--SPACE-6);
+    text-align: center;
   }
 
   .hero-bell img {
@@ -184,5 +270,23 @@
 
   .card {
     margin-bottom: 0;
+  }
+
+  .financial-content {
+    flex-direction: row;
+    gap: var(--SPACE-16);
+    align-items: flex-start;
+  }
+
+  .financial-text {
+    align-items: flex-start;
+    text-align: left;
+    max-width: 50%;
+  }
+
+  .button-group {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: var(--SPACE-6);
   }
 }
