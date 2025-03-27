@@ -1,0 +1,224 @@
+.analysis-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
+
+.chart-container {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.chart-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #284a63;
+}
+
+.chart-subtitle {
+  font-size: 13px;
+  color: #666;
+}
+
+.chart-canvas {
+  width: 100% !important;
+  height: 250px !important;
+  max-height: 250px;
+  position: relative;
+}
+
+.chart-legend {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-color {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+.legend-label {
+  font-size: 12px;
+  color: #4b4b4b;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.stat-card {
+  background: #f8f9fa;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 2px;
+}
+
+.stat-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: #284a63;
+}
+
+.category-list {
+  margin-top: 16px;
+}
+
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.category-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.category-icon {
+  font-size: 18px;
+}
+
+.category-name {
+  font-size: 14px;
+  color: #4b4b4b;
+}
+
+.category-amount {
+  font-size: 14px;
+  font-weight: 500;
+  color: #284a63;
+}
+
+.category-percentage {
+  font-size: 12px;
+  color: #666;
+  margin-left: 6px;
+}
+
+@media screen and (min-width: 768px) {
+  .analysis-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding: 24px;
+    grid-auto-rows: 1fr;
+  }
+
+  .chart-container {
+    padding: 24px;
+  }
+
+  .chart-header {
+    margin-bottom: 16px;
+  }
+
+  .chart-title {
+    font-size: 18px;
+  }
+
+  .chart-subtitle {
+    font-size: 14px;
+  }
+
+  .chart-canvas {
+    height: 300px !important;
+    max-height: 300px;
+  }
+
+  .chart-legend {
+    margin-top: 16px;
+    gap: 12px;
+  }
+
+  .legend-item {
+    gap: 8px;
+  }
+
+  .legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+  }
+
+  .legend-label {
+    font-size: 14px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .stat-card {
+    padding: 16px;
+  }
+
+  .stat-label {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .stat-value {
+    font-size: 20px;
+  }
+
+  .category-list {
+    margin-top: 24px;
+  }
+
+  .category-item {
+    padding: 12px 0;
+  }
+
+  .category-info {
+    gap: 12px;
+  }
+
+  .category-icon {
+    font-size: 20px;
+  }
+
+  .category-name {
+    font-size: 16px;
+  }
+
+  .category-amount {
+    font-size: 16px;
+  }
+
+  .category-percentage {
+    font-size: 14px;
+    margin-left: 8px;
+  }
+}
