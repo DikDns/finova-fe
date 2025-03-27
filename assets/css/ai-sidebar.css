@@ -1,0 +1,199 @@
+.ai-assistant-sidebar {
+  width: 384px;
+  height: 100svh;
+  position: fixed;
+  top: 0;
+  right: -384px;
+  background: #f9f9f9;
+  overflow: hidden;
+  border-left: 1px #d9d9d9 solid;
+  transition: right 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.ai-assistant-sidebar.show {
+  right: 0;
+}
+
+.ai-assistant-header {
+  width: 376px;
+  height: 76px;
+  padding: 32px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ai-assistant-title {
+  background: var(--AI_BRAND_GRADIENT);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 28.43px;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
+  text-shadow: 0px 2px 20px rgba(58, 12, 163, 0.25);
+}
+
+.ai-assistant-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ai-assistant-button {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.ai-assistant-button i {
+  width: 16px;
+  color: #868686;
+  font-size: 16px;
+  text-align: center;
+}
+
+.ai-assistant-greeting {
+  width: 283px;
+  left: 32px;
+  top: 96px;
+  position: absolute;
+  color: #353535;
+  font-size: 21.33px;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 600;
+}
+
+.ai-assistant-tabs {
+  padding: 24px 32px;
+  left: 0;
+  top: 183px;
+  position: absolute;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  overflow-x: auto;
+}
+
+.ai-assistant-tab {
+  white-space: nowrap;
+  padding: 8px 16px;
+  border-radius: 256px;
+  font-size: 16px;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 500;
+  line-height: 21.33px;
+  cursor: pointer;
+  box-shadow: 0px 8px 80px -2px rgba(53, 53, 53, 0.1);
+  outline: 1px solid #ebebeb;
+  outline-offset: -1px;
+}
+
+.ai-assistant-tab.active {
+  background: #dff6ff;
+  color: #284a63;
+  outline-color: #c6e0f9;
+}
+
+.ai-assistant-suggestions {
+  width: 320px;
+  left: 32px;
+  top: 269px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ai-assistant-suggestion {
+  padding: 4px 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.ai-assistant-suggestion:hover {
+  background: #ebebeb;
+}
+
+.ai-assistant-suggestion-text {
+  width: 283px;
+  color: #5e5e5e;
+  font-size: 16px;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
+  line-height: 21.33px;
+  letter-spacing: 0.32px;
+}
+
+.ai-assistant-input {
+  width: 384px;
+  padding: 20px 32px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  gap: 8px;
+}
+
+.ai-assistant-input-container {
+  flex: 1;
+  padding: 8px 16px;
+  background: #f3f3f3;
+  border-radius: 12px;
+  box-shadow: 0px 4px 50px -2px rgba(53, 53, 53, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ai-assistant-input-field {
+  flex: 1;
+  border: none;
+  background: none;
+  color: #353535;
+  font-size: 16px;
+  font-family: "Work Sans", sans-serif;
+  line-height: 24px;
+}
+
+.ai-assistant-input-field::placeholder {
+  color: #9b9b9b;
+}
+
+.ai-assistant-send-button {
+  width: 36px;
+  height: 36px;
+  padding: 8px;
+  border: none;
+  border-radius: 128px;
+  background: linear-gradient(
+    227deg,
+    #f72585 0%,
+    rgba(114, 9, 183, 0.75) 25%,
+    rgba(58, 12, 163, 0.75) 50%,
+    rgba(67, 97, 238, 0.75) 75%,
+    #4cc9f0 100%
+  );
+  color: #f9f9f9;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ai-assistant-send-button i {
+  color: #f9f9f9;
+  font-size: 16px;
+}

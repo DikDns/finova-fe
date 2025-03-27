@@ -180,7 +180,6 @@
 
 /* Budget Table */
 .budget-table-container {
-  background-color: white;
   border-radius: 0px;
   margin-top: var(--SPACE-4);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -188,17 +187,6 @@
 
 .add-category-btn {
   display: none;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--PRIMARY_600);
-  background: none;
-  border: none;
-  padding: 1rem;
-  cursor: pointer;
-  font-weight: 500;
-  width: 100%;
-  justify-content: center;
-  border-bottom: 1px solid var(--NEUTRAL_100);
 }
 
 .budget-table {
@@ -367,6 +355,20 @@
     flex-direction: row;
     align-items: center;
     border-bottom: none;
+  }
+
+  .add-category-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--PRIMARY_600);
+    background: none;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    justify-content: center;
+    border-bottom: 1px solid var(--NEUTRAL_100);
   }
 
   .budget-table thead {

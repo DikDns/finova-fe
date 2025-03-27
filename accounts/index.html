@@ -2,16 +2,10 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-
-    <!-- Responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- SEO -->
-    <meta name="description" content="Finova" />
-    <meta name="keywords" content="Finova" />
-
-    <title>Finova | Accounts</title>
-
-    <!-- FAVICON -->
+    <meta name="description" content="Finova - Manajemen Keuangan" />
+    <meta name="keywords" content="Finova, Keuangan, Budget, Anggaran" />
+    <title>Finova | Rekening</title>
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -30,20 +24,236 @@
       href="../assets/favicon/favicon-16x16.png"
     />
     <link rel="manifest" href="../assets/favicon/site.webmanifest" />
-
-    <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/reset.css" />
     <link rel="stylesheet" href="../assets/css/globals.css" />
-
-    <!-- Fontawesome -->
+    <link rel="stylesheet" href="../assets/css/budget.css" />
+    <link rel="stylesheet" href="../assets/css/ai-sidebar.css" />
     <script
       src="https://kit.fontawesome.com/89851fc4a2.js"
       crossorigin="anonymous"
     ></script>
+    <script src="../assets/js/ai-sidebar.js"></script>
   </head>
   <body>
-    <h1>Accounts</h1>
+    <div class="budget-container">
+      <div class="sidebar">
+        <div>
+          <div class="account-info">
+            <img
+              src="../assets/img/finova-logo.svg"
+              alt="Finova Logo"
+              class="logo"
+            />
+            <button class="heading-button">
+              <div>
+                <span class="name">Andika Eka Kurnia</span>
+                <span class="email">andika.eka.kurnia@upi.edu</span>
+              </div>
+              <i class="fa-solid fa-caret-down"></i>
+            </button>
+          </div>
+          <div class="nav-items">
+            <a href="../budget/" class="nav-item">
+              <i class="fas fa-wallet"></i>
+              <span>Keuangan</span>
+            </a>
+            <a href="../analysis/" class="nav-item">
+              <i class="fas fa-chart-line"></i>
+              <span>Analisa</span>
+            </a>
+            <a href="#" class="nav-item active">
+              <i class="fas fa-receipt"></i>
+              <span>Rekening</span>
+            </a>
+          </div>
+        </div>
+        <div class="mobile-header">
+          <button class="month-selector">
+            <span id="currentMonth">Mar 2025</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="mobile-button-more">
+            <button class="mobile-button-icon">
+              <i class="fa-solid fa-pen-to-square"></i>
+            </button>
+            <button class="mobile-button-icon">
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </button>
+          </div>
+        </div>
+        <div class="balance-card">
+          <div class="balance-wrapper">
+            <div class="balance-indicator"></div>
+            <div class="balance-container">
+              <span class="balance-amount" id="balanceAmount">Rp2.000.000</span>
+              <span class="balance-label">Siap dialokasikan</span>
+            </div>
+          </div>
+          <button class="allocate-btn" id="allocateBtn">Alokasikan</button>
+        </div>
+      </div>
 
-    <script src="../assets/js/main.js"></script>
+      <div class="main-content">
+        <div class="header">
+          <div class="month-selector">
+            <button id="prevMonth"><i class="fas fa-chevron-left"></i></button>
+            <span id="currentMonth">Mar 2025</span>
+            <button id="nextMonth"><i class="fas fa-chevron-right"></i></button>
+          </div>
+          <button class="ai-assistant-btn">AI Assistant</button>
+        </div>
+
+        <div class="tabs">
+          <div class="tab active" data-tab="semua">Semua</div>
+          <div class="tab" data-tab="kekurangan">Kekurangan Dana</div>
+          <div class="tab" data-tab="kelebihan">Kelebihan Dana</div>
+          <div class="tab" data-tab="dinonaktifkan">Dinonaktifkan</div>
+        </div>
+
+        <div class="budget-table-container">
+          <button class="add-category-btn" id="addCategoryBtn">
+            <i class="fas fa-plus-circle"></i>
+            <span>Tambah Kategori</span>
+          </button>
+          <table class="budget-table">
+            <thead>
+              <tr>
+                <th>Kategori</th>
+                <th>Dialokasikan</th>
+                <th>Transaksi</th>
+                <th>Target</th>
+              </tr>
+            </thead>
+            <tbody id="budgetTableBody">
+              <!-- Tagihan Category -->
+              <tr class="group-row" id="group-trigger">
+                <td class="desktop" colspan="4">
+                  <i class="fas fa-minus"></i>
+                  Tagihan
+                </td>
+                <td class="mobile">
+                  <i class="fas fa-minus"></i>
+                  Tagihan
+                </td>
+                <td class="total-amount-allocated">
+                  <span>Dialokasikan</span>
+                  <span>Rp450.000</span>
+                </td>
+                <td class="total-amount-spent">-Rp350.000</td>
+                <td class="total-amount-target">
+                  <span>Target</span>
+                  <span>Rp100.000</span>
+                </td>
+              </tr>
+              <tr class="category-row" data-group="Tagihan">
+                <td>
+                  <span class="category-icon">🏠</span>
+                  KPR
+                </td>
+                <td class="amount-allocated">Rp450.000</td>
+                <td class="amount-spent">-Rp350.000</td>
+                <td class="amount-target">Rp100.000</td>
+              </tr>
+              <tr class="category-row" data-group="Tagihan">
+                <td>
+                  <span class="category-icon">⚡</span>
+                  Listrik
+                </td>
+                <td class="amount-allocated">Rp450.000</td>
+                <td class="amount-spent">-Rp350.000</td>
+                <td class="amount-target">Rp100.000</td>
+              </tr>
+              <tr class="category-row" data-group="Tagihan">
+                <td>
+                  <span class="category-icon">🗑️</span>
+                  Sampah
+                </td>
+                <td class="amount-allocated">Rp450.000</td>
+                <td class="amount-spent">-Rp350.000</td>
+                <td class="amount-target">Rp100.000</td>
+              </tr>
+              <tr class="category-row" data-group="Tagihan">
+                <td>
+                  <span class="category-icon">💧</span>
+                  Air
+                </td>
+                <td class="amount-allocated">Rp450.000</td>
+                <td class="amount-spent">-Rp350.000</td>
+                <td class="amount-target">Rp100.000</td>
+              </tr>
+              <tr class="category-row" data-group="Tagihan">
+                <td>
+                  <span class="category-icon">📶</span>
+                  Internet
+                </td>
+                <td class="amount-allocated">Rp450.000</td>
+                <td class="amount-spent">-Rp350.000</td>
+                <td class="amount-target">Rp100.000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="ai-assistant-sidebar">
+      <div class="ai-assistant-header">
+        <div class="ai-assistant-title">AI Assistant</div>
+        <div class="ai-assistant-actions">
+          <button class="ai-assistant-button" id="historyButton">
+            <i class="fa-solid fa-history"></i>
+          </button>
+          <button class="ai-assistant-button" id="closeButton">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="ai-assistant-greeting">
+        Selamat pagi, Andika!<br />Aku siap bantu ngatur keuanganmu hari ini 😊
+      </div>
+
+      <div class="ai-assistant-tabs">
+        <div class="ai-assistant-tab active">Kelola Keuangan</div>
+        <div class="ai-assistant-tab">Belajar Finansial</div>
+        <div class="ai-assistant-tab">Analisis Keuangan</div>
+        <div class="ai-assistant-tab">Tentang Finova</div>
+      </div>
+
+      <div class="ai-assistant-suggestions">
+        <div class="ai-assistant-suggestion">
+          <div class="ai-assistant-suggestion-text">
+            Berikan rekomendasi /kategori berdasarkan profil aku
+          </div>
+        </div>
+        <div class="ai-assistant-suggestion">
+          <div class="ai-assistant-suggestion-text">
+            Buatkan /target berdasarkan dana yang aku punya sekarang
+          </div>
+        </div>
+        <div class="ai-assistant-suggestion">
+          <div class="ai-assistant-suggestion-text">
+            Perbarui /target berdasarkan transaksi rekening bulan lalu
+          </div>
+        </div>
+        <div class="ai-assistant-suggestion">
+          <div class="ai-assistant-suggestion-text">
+            Perbarui /grup-kategori dan /kategori berdasarkan prinsip money game
+          </div>
+        </div>
+      </div>
+
+      <div class="ai-assistant-input">
+        <div class="ai-assistant-input-container">
+          <input
+            type="text"
+            class="ai-assistant-input-field"
+            placeholder="Ketik / untuk memberikan konteks pada pesan..."
+          />
+          <button class="ai-assistant-send-button">
+            <i class="fa-solid fa-arrow-up"></i>
+          </button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
