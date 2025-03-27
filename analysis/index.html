@@ -2,16 +2,10 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-
-    <!-- Responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- SEO -->
-    <meta name="description" content="Finova" />
-    <meta name="keywords" content="Finova" />
-
-    <title>Finova | Analysis</title>
-
-    <!-- FAVICON -->
+    <meta name="description" content="Finova - Manajemen Keuangan" />
+    <meta name="keywords" content="Finova, Keuangan, Budget, Anggaran" />
+    <title>Finova | Analisa</title>
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -30,20 +24,218 @@
       href="../assets/favicon/favicon-16x16.png"
     />
     <link rel="manifest" href="../assets/favicon/site.webmanifest" />
-
-    <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/reset.css" />
     <link rel="stylesheet" href="../assets/css/globals.css" />
-
-    <!-- Fontawesome -->
+    <link rel="stylesheet" href="../assets/css/budget.css" />
+    <link rel="stylesheet" href="../assets/css/account.css" />
+    <link rel="stylesheet" href="../assets/css/ai-sidebar.css" />
+    <link rel="stylesheet" href="../assets/css/analysis.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
     <script
       src="https://kit.fontawesome.com/89851fc4a2.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
-    <h1>Analysis</h1>
+    <div class="budget-container">
+      <div class="sidebar">
+        <div>
+          <div class="account-info">
+            <img
+              src="../assets/img/finova-logo.svg"
+              alt="Finova Logo"
+              class="logo"
+            />
+            <button class="heading-button">
+              <div>
+                <span class="name">Andika Eka Kurnia</span>
+                <span class="email">andika.eka.kurnia@upi.edu</span>
+              </div>
+              <i class="fa-solid fa-caret-down"></i>
+            </button>
+          </div>
+          <div class="nav-items">
+            <a href="../budget/" class="nav-item">
+              <i class="fas fa-wallet"></i>
+              <span>Keuangan</span>
+            </a>
+            <a href="#" class="nav-item active">
+              <i class="fas fa-chart-line"></i>
+              <span>Analisa</span>
+            </a>
+            <a href="../accounts/" class="nav-item">
+              <i class="fas fa-receipt"></i>
+              <span>Rekening</span>
+            </a>
+          </div>
+        </div>
+        <div class="mobile-header">
+          <div class="header-text-container">
+            <h6>Analisa</h6>
+          </div>
+          <div class="mobile-button-more">
+            <button class="mobile-button-icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <button class="mobile-button-icon">
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </button>
+          </div>
+        </div>
+      </div>
 
-    <script src="../assets/js/main.js"></script>
+      <div class="main-content">
+        <div class="header">
+          <h5>Analisa</h5>
+
+          <button class="ai-assistant-btn">AI Assistant</button>
+        </div>
+
+        <div class="analysis-container">
+          <div class="chart-container">
+            <div class="chart-header">
+              <div>
+                <h3 class="chart-title">Total Pengeluaran</h3>
+                <p class="chart-subtitle">Rp450.000</p>
+              </div>
+            </div>
+            <canvas id="expenseChart" class="chart-canvas"></canvas>
+            <div class="chart-legend" id="expenseLegend"></div>
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-label">Rerata Pengeluaran Bulanan</div>
+                <div class="stat-value">Rp250.000</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-label">Rerata Pengeluaran Harian</div>
+                <div class="stat-value">Rp82.000</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-label">Kategori Paling Aktif</div>
+                <div class="stat-value">🏠 KPR</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-label">Pengeluaran Terbesar</div>
+                <div class="stat-value">Rp120.000</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="chart-container">
+            <div class="chart-header">
+              <div>
+                <h3 class="chart-title">Kategori Pengeluaran</h3>
+                <p class="chart-subtitle">Berdasarkan Persentase</p>
+              </div>
+            </div>
+            <div class="category-list">
+              <div class="category-item">
+                <div class="category-info">
+                  <span class="category-icon">🏠</span>
+                  <span class="category-name">KPR</span>
+                </div>
+                <div>
+                  <span class="category-amount">Rp250.000</span>
+                  <span class="category-percentage">77%</span>
+                </div>
+              </div>
+              <div class="category-item">
+                <div class="category-info">
+                  <span class="category-icon">⚡</span>
+                  <span class="category-name">Listrik</span>
+                </div>
+                <div>
+                  <span class="category-amount">Rp250.000</span>
+                  <span class="category-percentage">22%</span>
+                </div>
+              </div>
+              <div class="category-item">
+                <div class="category-info">
+                  <span class="category-icon">🛒</span>
+                  <span class="category-name">Belanja</span>
+                </div>
+                <div>
+                  <span class="category-amount">Rp250.000</span>
+                  <span class="category-percentage">34%</span>
+                </div>
+              </div>
+              <div class="category-item">
+                <div class="category-info">
+                  <span class="category-icon">⛽</span>
+                  <span class="category-name">Bensin</span>
+                </div>
+                <div>
+                  <span class="category-amount">Rp250.000</span>
+                  <span class="category-percentage">22%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ai-assistant-sidebar">
+      <div class="ai-assistant-header">
+        <div class="ai-assistant-title">AI Assistant</div>
+        <div class="ai-assistant-actions">
+          <button class="ai-assistant-button" id="historyButton">
+            <i class="fa-solid fa-history"></i>
+          </button>
+          <button class="ai-assistant-button" id="closeButton">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="ai-assistant-greeting">
+        Selamat pagi, Andika!<br />Aku siap bantu ngatur keuanganmu hari ini 😊
+      </div>
+
+      <div class="ai-assistant-tabs">
+        <div class="ai-assistant-tab active">Kelola Keuangan</div>
+        <div class="ai-assistant-tab">Belajar Finansial</div>
+        <div class="ai-assistant-tab">Analisis Keuangan</div>
+        <div class="ai-assistant-tab">Tentang Finova</div>
+      </div>
+
+      <div class="ai-assistant-suggestions">
+        <div class="ai-assistant-suggestion">
+          <div class="ai-assistant-suggestion-text">
+            Berikan rekomendasi /kategori berdasarkan profil aku
+          </div>
+        </div>
+        <div class="ai-assistant-suggestion">
+          <div class="ai-assistant-suggestion-text">
+            Buatkan /target berdasarkan dana yang aku punya sekarang
+          </div>
+        </div>
+        <div class="ai-assistant-suggestion">
+          <div class="ai-assistant-suggestion-text">
+            Perbarui /target berdasarkan transaksi rekening bulan lalu
+          </div>
+        </div>
+        <div class="ai-assistant-suggestion">
+          <div class="ai-assistant-suggestion-text">
+            Perbarui /grup-kategori dan /kategori berdasarkan prinsip money game
+          </div>
+        </div>
+      </div>
+
+      <div class="ai-assistant-input">
+        <div class="ai-assistant-input-container">
+          <input
+            type="text"
+            class="ai-assistant-input-field"
+            placeholder="Ketik / untuk memberikan konteks pada pesan..."
+          />
+          <button class="ai-assistant-send-button">
+            <i class="fa-solid fa-arrow-up"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../assets/js/ai-sidebar.js"></script>
+    <script src="../assets/js/analysis.js"></script>
   </body>
 </html>

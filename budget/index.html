@@ -26,11 +26,13 @@
     <link rel="manifest" href="../assets/favicon/site.webmanifest" />
     <link rel="stylesheet" href="../assets/css/reset.css" />
     <link rel="stylesheet" href="../assets/css/globals.css" />
-    <link rel="stylesheet" href="../assets//css/budget.css" />
+    <link rel="stylesheet" href="../assets/css/budget.css" />
+    <link rel="stylesheet" href="../assets/css/ai-sidebar.css" />
     <script
       src="https://kit.fontawesome.com/89851fc4a2.js"
       crossorigin="anonymous"
     ></script>
+    <script src="../assets/js/ai-sidebar.js"></script>
   </head>
   <body>
     <div class="budget-container">
@@ -190,6 +192,66 @@
               </tr>
             </tbody>
           </table>
+        </div>
+      </div>
+    </div>
+    <div class="ai-assistant-sidebar">
+      <div class="ai-assistant-header">
+        <div class="ai-assistant-title">AI Assistant</div>
+        <div class="ai-assistant-actions">
+          <button class="ai-assistant-button" id="historyButton">
+            <i class="fa-solid fa-history"></i>
+          </button>
+          <button class="ai-assistant-button" id="closeButton">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="ai-assistant-greeting">
+        Selamat pagi, Andika!<br />Aku siap bantu ngatur keuanganmu hari ini 😊
+      </div>
+
+      <div class="ai-assistant-tabs">
+        <div class="ai-assistant-tab active">Kelola Keuangan</div>
+        <div class="ai-assistant-tab">Belajar Finansial</div>
+        <div class="ai-assistant-tab">Analisis Keuangan</div>
+        <div class="ai-assistant-tab">Tentang Finova</div>
+      </div>
+
+      <div class="ai-assistant-suggestions">
+        <div class="ai-assistant-suggestion">
+          <div class="ai-assistant-suggestion-text">
+            Berikan rekomendasi /kategori berdasarkan profil aku
+          </div>
+        </div>
+        <div class="ai-assistant-suggestion">
+          <div class="ai-assistant-suggestion-text">
+            Buatkan /target berdasarkan dana yang aku punya sekarang
+          </div>
+        </div>
+        <div class="ai-assistant-suggestion">
+          <div class="ai-assistant-suggestion-text">
+            Perbarui /target berdasarkan transaksi rekening bulan lalu
+          </div>
+        </div>
+        <div class="ai-assistant-suggestion">
+          <div class="ai-assistant-suggestion-text">
+            Perbarui /grup-kategori dan /kategori berdasarkan prinsip money game
+          </div>
+        </div>
+      </div>
+
+      <div class="ai-assistant-input">
+        <div class="ai-assistant-input-container">
+          <input
+            type="text"
+            class="ai-assistant-input-field"
+            placeholder="Ketik / untuk memberikan konteks pada pesan..."
+          />
+          <button class="ai-assistant-send-button">
+            <i class="fa-solid fa-arrow-up"></i>
+          </button>
         </div>
       </div>
     </div>

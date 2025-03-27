@@ -2,16 +2,10 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-
-    <!-- Responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- SEO -->
-    <meta name="description" content="Finova" />
-    <meta name="keywords" content="Finova" />
-
-    <title>Finova | Accounts</title>
-
-    <!-- FAVICON -->
+    <meta name="description" content="Finova - Manajemen Keuangan" />
+    <meta name="keywords" content="Finova, Keuangan, Budget, Anggaran" />
+    <title>Finova | Rekening</title>
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -30,20 +24,330 @@
       href="../assets/favicon/favicon-16x16.png"
     />
     <link rel="manifest" href="../assets/favicon/site.webmanifest" />
-
-    <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/reset.css" />
     <link rel="stylesheet" href="../assets/css/globals.css" />
-
-    <!-- Fontawesome -->
+    <link rel="stylesheet" href="../assets/css/budget.css" />
+    <link rel="stylesheet" href="../assets/css/account.css" />
+    <link rel="stylesheet" href="../assets/css/ai-sidebar.css" />
     <script
       src="https://kit.fontawesome.com/89851fc4a2.js"
       crossorigin="anonymous"
     ></script>
+    <script src="../assets/js/ai-sidebar.js"></script>
   </head>
   <body>
-    <h1>Accounts</h1>
+    <div class="budget-container">
+      <div class="sidebar">
+        <div>
+          <div class="account-info">
+            <img
+              src="../assets/img/finova-logo.svg"
+              alt="Finova Logo"
+              class="logo"
+            />
+            <button class="heading-button">
+              <div>
+                <span class="name">Andika Eka Kurnia</span>
+                <span class="email">andika.eka.kurnia@upi.edu</span>
+              </div>
+              <i class="fa-solid fa-caret-down"></i>
+            </button>
+          </div>
+          <div class="nav-items">
+            <a href="../budget/" class="nav-item">
+              <i class="fas fa-wallet"></i>
+              <span>Keuangan</span>
+            </a>
+            <a href="../analysis/" class="nav-item">
+              <i class="fas fa-chart-line"></i>
+              <span>Analisa</span>
+            </a>
+            <a href="#" class="nav-item active">
+              <i class="fas fa-receipt"></i>
+              <span>Rekening</span>
+            </a>
+          </div>
+        </div>
+        <div class="mobile-header">
+          <div class="header-text-container">
+            <h6>Semua Transaksi</h6>
+          </div>
+          <div class="mobile-button-more">
+            <button class="mobile-button-icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <button class="mobile-button-icon">
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </button>
+          </div>
+        </div>
+      </div>
 
-    <script src="../assets/js/main.js"></script>
+      <div class="main-content">
+        <div class="header">
+          <button class="header-text-button">
+            <h5>Semua Rekening</h5>
+            <i class="fa-solid fa-caret-down"></i>
+          </button>
+          <button class="ai-assistant-btn">AI Assistant</button>
+        </div>
+
+        <div class="current-budget">
+          <h6 class="current-budget-text">Rp2.000.000</h6>
+        </div>
+
+        <div class="transaction-table-container">
+          <button class="add-transaction-btn" id="addTransactionBtn">
+            <i class="fas fa-plus-circle"></i>
+            <span>Tambah Transaksi</span>
+          </button>
+          <table class="transaction-table">
+            <thead>
+              <tr>
+                <th>
+                  <input type="checkbox" class="select-all" />
+                </th>
+                <th>Rekening</th>
+                <th>Tanggal</th>
+                <th>Penerima</th>
+                <th>Pengeluaran</th>
+                <th>Pemasukan</th>
+              </tr>
+            </thead>
+            <tbody id="transactionTableBody">
+              <tr>
+                <td>
+                  <button class="flag-btn">
+                    <i class="fa-solid fa-flag"></i>
+                  </button>
+                </td>
+                <td>Utama</td>
+                <td>03/23/2025</td>
+                <td></td>
+                <td></td>
+                <td>Rp50.000</td>
+              </tr>
+              <tr>
+                <td>
+                  <button class="flag-btn">
+                    <i class="fa-solid fa-flag"></i>
+                  </button>
+                </td>
+                <td>Utama</td>
+                <td>03/23/2025</td>
+                <td></td>
+                <td></td>
+                <td>Rp200.000</td>
+              </tr>
+              <tr>
+                <td>
+                  <button class="flag-btn">
+                    <i class="fa-solid fa-flag"></i>
+                  </button>
+                </td>
+                <td>Utama</td>
+                <td>03/21/2025</td>
+                <td></td>
+                <td>-Rp5.000</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>
+                  <button class="flag-btn">
+                    <i class="fa-solid fa-flag"></i>
+                  </button>
+                </td>
+                <td>Utama</td>
+                <td>03/19/2025</td>
+                <td></td>
+                <td>-Rp100.000</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>
+                  <button class="flag-btn">
+                    <i class="fa-solid fa-flag"></i>
+                  </button>
+                </td>
+                <td>Utama</td>
+                <td>03/19/2025</td>
+                <td></td>
+                <td></td>
+                <td>Rp500.000</td>
+              </tr>
+              <tr>
+                <td>
+                  <button class="flag-btn">
+                    <i class="fa-solid fa-flag"></i>
+                  </button>
+                </td>
+                <td>Utama</td>
+                <td>03/18/2025</td>
+                <td></td>
+                <td>-Rp50.000</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <ul class="transaction-list">
+            <li class="transaction-item">
+              <div class="transaction-date">03/23/2025</div>
+              <div class="transaction-group">
+                <div class="transaction-checkbox">
+                  <input type="checkbox" />
+                </div>
+                <div class="transaction-content">
+                  <div class="transaction-payee">Penerima Diperlukan</div>
+                  <div class="transaction-subtitle">Siap Dialokasikan</div>
+                </div>
+                <div class="transaction-amount-account">
+                  <div class="transaction-amount positive">Rp50.000</div>
+                  <div class="transaction-account">utama</div>
+                </div>
+              </div>
+            </li>
+            <li class="transaction-item">
+              <div class="transaction-group">
+                <div class="transaction-checkbox">
+                  <input type="checkbox" />
+                </div>
+                <div class="transaction-content">
+                  <div class="transaction-payee">Penerima Diperlukan</div>
+                  <div class="transaction-subtitle">Siap Dialokasikan</div>
+                </div>
+                <div class="transaction-amount-account">
+                  <div class="transaction-amount positive">Rp200.000</div>
+                  <div class="transaction-account">utama</div>
+                </div>
+              </div>
+            </li>
+            <li class="transaction-item">
+              <div class="transaction-date">03/21/2025</div>
+              <div class="transaction-group">
+                <div class="transaction-checkbox">
+                  <input type="checkbox" />
+                </div>
+                <div class="transaction-content">
+                  <div class="transaction-payee">Penerima Diperlukan</div>
+                  <div class="transaction-subtitle">🛒 Belanja</div>
+                </div>
+                <div class="transaction-amount-account">
+                  <div class="transaction-amount negative">-Rp5.000</div>
+                  <div class="transaction-account">utama</div>
+                </div>
+              </div>
+            </li>
+            <li class="transaction-item">
+              <div class="transaction-date">03/19/2025</div>
+              <div class="transaction-group">
+                <div class="transaction-checkbox">
+                  <input type="checkbox" />
+                </div>
+                <div class="transaction-content">
+                  <div class="transaction-payee">Penerima Diperlukan</div>
+                  <div class="transaction-subtitle">🏠 KPR</div>
+                </div>
+                <div class="transaction-amount-account">
+                  <div class="transaction-amount negative">-Rp100.000</div>
+                  <div class="transaction-account">utama</div>
+                </div>
+              </div>
+            </li>
+            <li class="transaction-item">
+              <div class="transaction-group">
+                <div class="transaction-checkbox">
+                  <input type="checkbox" />
+                </div>
+                <div class="transaction-content">
+                  <div class="transaction-payee">Penerima Diperlukan</div>
+                  <div class="transaction-subtitle">Siap Dialokasikan</div>
+                </div>
+                <div class="transaction-amount-account">
+                  <div class="transaction-amount positive">Rp500.000</div>
+                  <div class="transaction-account">utama</div>
+                </div>
+              </div>
+            </li>
+            <li class="transaction-item">
+              <div class="transaction-date">03/18/2025</div>
+              <div class="transaction-group">
+                <div class="transaction-checkbox">
+                  <input type="checkbox" />
+                </div>
+                <div class="transaction-content">
+                  <div class="transaction-payee">Penerima Diperlukan</div>
+                  <div class="transaction-subtitle">⛽ Bensin</div>
+                </div>
+                <div class="transaction-amount-account">
+                  <div class="transaction-amount negative">-Rp50.000</div>
+                  <div class="transaction-account">utama</div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="ai-assistant-sidebar">
+      <div class="ai-assistant-header">
+        <div class="ai-assistant-title">AI Assistant</div>
+        <div class="ai-assistant-actions">
+          <button class="ai-assistant-button" id="historyButton">
+            <i class="fa-solid fa-history"></i>
+          </button>
+          <button class="ai-assistant-button" id="closeButton">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="ai-assistant-greeting">
+        Selamat pagi, Andika!<br />Aku siap bantu ngatur keuanganmu hari ini 😊
+      </div>
+
+      <div class="ai-assistant-tabs">
+        <div class="ai-assistant-tab active">Kelola Keuangan</div>
+        <div class="ai-assistant-tab">Belajar Finansial</div>
+        <div class="ai-assistant-tab">Analisis Keuangan</div>
+        <div class="ai-assistant-tab">Tentang Finova</div>
+      </div>
+
+      <div class="ai-assistant-suggestions">
+        <div class="ai-assistant-suggestion">
+          <div class="ai-assistant-suggestion-text">
+            Berikan rekomendasi /kategori berdasarkan profil aku
+          </div>
+        </div>
+        <div class="ai-assistant-suggestion">
+          <div class="ai-assistant-suggestion-text">
+            Buatkan /target berdasarkan dana yang aku punya sekarang
+          </div>
+        </div>
+        <div class="ai-assistant-suggestion">
+          <div class="ai-assistant-suggestion-text">
+            Perbarui /target berdasarkan transaksi rekening bulan lalu
+          </div>
+        </div>
+        <div class="ai-assistant-suggestion">
+          <div class="ai-assistant-suggestion-text">
+            Perbarui /grup-kategori dan /kategori berdasarkan prinsip money game
+          </div>
+        </div>
+      </div>
+
+      <div class="ai-assistant-input">
+        <div class="ai-assistant-input-container">
+          <input
+            type="text"
+            class="ai-assistant-input-field"
+            placeholder="Ketik / untuk memberikan konteks pada pesan..."
+          />
+          <button class="ai-assistant-send-button">
+            <i class="fa-solid fa-arrow-up"></i>
+          </button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
