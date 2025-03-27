@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.container {
+  border-radius: 20px 20px 0 0;
+  background-color: white;
+  width: 100%;
+  max-width: 80%;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.header h1 {
+  padding-top: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.options-grid {
+  width: fit-content;
+  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 40px;
+}
+
+.option-button {
+  width: 400px;
+  padding: 20px;
+  gap: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.option-button.active,
+.option-button.active:hover {
+  border-radius: 10px;
+  border-right: 3px solid var(--ACCENT, #d9d9d9);
+  border-bottom: 3px solid var(--ACCENT, #d9d9d9);
+  background: var(--PRIMARY, #284a63);
+  color: var(--PRIMARY_50, #f0f0f0);
+}
+
+.option-button:hover {
+  background-color: #f0f0f0;
+  border: 1px solid #284a63;
+}
+
+.option-button .text {
+  font-size: 1rem;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: end;
+  gap: 25px;
+}
+
+.back,
+.next {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 140px;
+  min-height: 40px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.back {
+  background-color: #dff6ff;
+  color: #284a63;
+}
+
+.next {
+  background-color: #284a63;
+  color: #ffffff;
+}
+
+.back:hover {
+  background-color: #284a63;
+  color: #ffffff;
+}
+
+.next:hover {
+  background-color: #dff6ff;
+  color: #284a63;
+}
+
+.btn-back,
+.btn-next {
+  width: 100%;
+}
