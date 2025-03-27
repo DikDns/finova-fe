@@ -108,16 +108,18 @@
 }
 
 .btn-primary {
-  display: inline-block;
+  display: inline-flex;
   padding: var(--SPACE-2) var(--SPACE-6);
   background: var(--PRIMARY_700);
   color: var(--BACKGROUND);
   border-radius: 32px;
-  text-align: center;
   width: 100%;
   max-width: 400px;
   text-decoration: none;
   transition: background-color 0.3s ease;
+  gap: var(--SPACE-4);
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-primary:hover {
@@ -125,16 +127,18 @@
 }
 
 .btn-secondary {
-  display: inline-block;
+  display: inline-flex;
   padding: var(--SPACE-2) var(--SPACE-6);
   background: var(--PRIMARY_50);
   color: var(--PRIMARY);
   text-decoration: none;
-  text-align: center;
   width: 100%;
   max-width: 400px;
   border-radius: 32px;
   transition: all 0.3s ease;
+  gap: var(--SPACE-4);
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-secondary:hover {
