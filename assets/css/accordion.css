@@ -1,0 +1,69 @@
+.group-row {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  position: relative;
+}
+
+.group-row:hover,
+.group-row.active:hover {
+  background-color: var(--NEUTRAL_100);
+}
+
+.group-row.active {
+  background-color: var(--NEUTRAL_50);
+}
+
+.category-row {
+  transition: max-height 0.3s ease-in-out, transform 0.3s ease-in-out;
+  max-height: 0;
+  transform: translateY(-10px);
+  overflow: hidden;
+}
+
+.category-row[data-group="tagihan"] {
+  max-height: 300px;
+  transform: translateY(0);
+}
+
+.group-row .icon {
+  transition: transform 0.3s ease;
+  display: inline-block;
+  margin-right: 8px;
+  width: 12px;
+  height: 12px;
+  position: relative;
+}
+
+.group-row .icon::before,
+.group-row .icon::after {
+  content: "";
+  position: absolute;
+  background-color: var(--NEUTRAL_900);
+  transition: transform 0.3s ease;
+}
+
+.group-row .icon::before {
+  width: 12px;
+  height: 2px;
+  top: 5px;
+}
+
+.group-row .icon::after {
+  width: 2px;
+  height: 12px;
+  left: 5px;
+  transform-origin: center;
+}
+
+.group-row .icon.collapsed::after {
+  transform: scaleY(1);
+}
+
+.group-row .icon:not(.collapsed)::after {
+  transform: scaleY(0);
+}
+
+.group-row.collapsed + .category-row[data-group="tagihan"] {
+  max-height: 0;
+  transform: translateY(-10px);
+}

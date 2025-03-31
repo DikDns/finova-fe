@@ -28,11 +28,13 @@
     <link rel="stylesheet" href="../assets/css/globals.css" />
     <link rel="stylesheet" href="../assets/css/budget.css" />
     <link rel="stylesheet" href="../assets/css/ai-sidebar.css" />
+    <link rel="stylesheet" href="../assets/css/accordion.css" />
     <script
       src="https://kit.fontawesome.com/89851fc4a2.js"
       crossorigin="anonymous"
     ></script>
     <script src="../assets/js/ai-sidebar.js"></script>
+    <script src="../assets/js/tr-accordion.js"></script>
   </head>
   <body>
     <div class="budget-container">
@@ -125,14 +127,17 @@
               </tr>
             </thead>
             <tbody id="budgetTableBody">
-              <!-- Tagihan Category -->
-              <tr class="group-row" id="group-trigger">
+              <tr
+                class="group-row active"
+                id="group-trigger"
+                data-group="tagihan"
+              >
                 <td class="desktop" colspan="4">
-                  <i class="fas fa-minus"></i>
+                  <i class="icon"></i>
                   Tagihan
                 </td>
                 <td class="mobile">
-                  <i class="fas fa-minus"></i>
+                  <i class="icon"></i>
                   Tagihan
                 </td>
                 <td class="total-amount-allocated">
@@ -145,7 +150,7 @@
                   <span>Rp100.000</span>
                 </td>
               </tr>
-              <tr class="category-row" data-group="Tagihan">
+              <tr class="category-row" data-group="tagihan">
                 <td>
                   <span class="category-icon">🏠</span>
                   KPR
@@ -154,7 +159,7 @@
                 <td class="amount-spent">-Rp350.000</td>
                 <td class="amount-target">Rp100.000</td>
               </tr>
-              <tr class="category-row" data-group="Tagihan">
+              <tr class="category-row" data-group="tagihan">
                 <td>
                   <span class="category-icon">⚡</span>
                   Listrik
@@ -163,7 +168,7 @@
                 <td class="amount-spent">-Rp350.000</td>
                 <td class="amount-target">Rp100.000</td>
               </tr>
-              <tr class="category-row" data-group="Tagihan">
+              <tr class="category-row" data-group="tagihan">
                 <td>
                   <span class="category-icon">🗑️</span>
                   Sampah
@@ -172,7 +177,7 @@
                 <td class="amount-spent">-Rp350.000</td>
                 <td class="amount-target">Rp100.000</td>
               </tr>
-              <tr class="category-row" data-group="Tagihan">
+              <tr class="category-row" data-group="tagihan">
                 <td>
                   <span class="category-icon">💧</span>
                   Air
@@ -181,7 +186,7 @@
                 <td class="amount-spent">-Rp350.000</td>
                 <td class="amount-target">Rp100.000</td>
               </tr>
-              <tr class="category-row" data-group="Tagihan">
+              <tr class="category-row" data-group="tagihan">
                 <td>
                   <span class="category-icon">📶</span>
                   Internet
